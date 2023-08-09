@@ -1,0 +1,231 @@
+MU_estate_daamaad_territorial_right = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	loyalty = 0.05
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+}
+
+MU_estate_daamaad_rule = {
+	icon = privilege_seek_support_of_clergy
+	loyalty = 0.1
+	influence = 0.1
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+}
+
+MU_estate_daamaad_timur_worship = {
+	icon = privilege_supply_arms
+	loyalty = 0.15
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		leader_land_shock = 1
+	}
+}
+
+MU_estate_daamaad_expand_team = {
+	icon = privilege_morale_damage
+	loyalty = 0
+	influence = 0.1
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	modifier_by_land_ownership = {
+		land_morale = 0.25
+	}
+}
+
+MU_estate_daamaad_prohibit_bussiness = {
+	icon = privilege_discipline
+	loyalty = -0.1
+	influence = -0.1
+	max_absolutism = 0
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	modifier_by_land_ownership = {
+		land_maintenance_modifier = 0.15
+		discipline = 0.025
+	}
+}
+
+MU_estate_daamaad_civil_service = {
+	icon = privilege_government
+	land_share = 5
+	loyalty = 0
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	on_granted = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = MU_estate_daamaad_civil_service
+		}
+	}
+	on_revoked = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = MU_estate_daamaad_civil_service
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			NOT = {
+				estate_loyalty = {
+					estate = estate_daamaad
+					loyalty = 30
+				}
+			}
+		}
+		modifier = {
+			core_creation = 0.1
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_daamaad
+				loyalty = 30
+			}
+			NOT = {
+				estate_loyalty = {
+					estate = estate_daamaad
+					loyalty = 60
+				}
+			}
+		}
+		modifier = {
+			core_creation = -0.1
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_daamaad
+				loyalty = 60
+			}
+		}
+		modifier = {
+			core_creation = -0.15
+		}
+	}
+}
+
+MU_estate_daamaad_emergency_conscription = {
+	icon = privilege_army_tradition
+	loyalty = 0
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	on_granted = {
+		enable_estate_action = {
+			estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+		}
+	}
+	on_invalid = {
+		disable_estate_action = {
+			estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+		}
+	}
+	on_revoked = {
+		disable_estate_action = {
+			estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+		}
+	}
+}
+
+MU_estate_daamaad_develop = {
+	icon = privilege_development_efficiency
+	loyalty = 0.05
+	influence = 0
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	penalties = {
+		land_morale = -0.2
+	}
+	benefits = {
+		development_cost = -0.05
+		build_cost = -0.1
+		land_maintenance_modifier = -0.15
+	}
+	cooldown_years = 20
+}
+
+MU_estate_daamaad_appoint_general = {
+	icon = privilege_yearly_army_tradition
+	loyalty = -0.15
+	influence = -0.1
+	max_absolutism = 5
+	is_valid = {
+		always = yes
+	}
+	can_select = {
+		always = yes
+	}
+	benefits = {
+		army_tradition_decay = -0.01
+		defensiveness = 0.05
+	}
+}
+
+MU_estate_daamaad_sufism = {
+	icon = privilege_muslim_manpower
+	loyalty = 0.05
+	influence = -0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	on_granted = {
+		add_piety = -0.5
+	}
+	benefits = {
+		infantry_power = 0.05
+	}
+}

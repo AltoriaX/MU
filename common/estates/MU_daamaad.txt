@@ -3,8 +3,12 @@ estate_daamaad = {
 
 	# If true, country will get estate
 	trigger = {
-		# tag = GEK
-		always = no
+		NOT = { has_government_attribute = disables_estate_daamaad }
+		NOT = { has_country_flag = disables_estate_daamaad_flag }
+		OR = {
+			has_government_attribute = enables_estate_daamaad
+			has_country_flag = enables_estate_daamaad_flag
+		}
 	}
 
 	# These scale with loyalty & power
@@ -20,14 +24,36 @@ estate_daamaad = {
 
 	province_independence_weight = {}
 
+	land_ownership_modifier = {
+		daamaad_loyalty_modifier = 0.2
+	}
+
 	# Influence modifiers
 	base_influence = 10
 
 	contributes_to_curia_treasury = yes
 	color = { 63 143 176 }
 
-	privileges = {}
+	privileges = {
+		MU_estate_daamaad_territorial_right
+		MU_estate_daamaad_rule
+		MU_estate_daamaad_timur_worship
+		MU_estate_daamaad_expand_team
+		MU_estate_daamaad_prohibit_bussiness
+		MU_estate_daamaad_civil_service
+		MU_estate_daamaad_emergency_conscription
+		MU_estate_daamaad_develop
+		MU_estate_daamaad_appoint_general
+		MU_estate_daamaad_sufism
+	}
 
-	agendas = {}
+	agendas = {
+		MU_nomadic_tribe_agenda_1
+		MU_nomadic_tribe_agenda_2
+		MU_nomadic_tribe_agenda_3
+		MU_nomadic_tribe_agenda_4
+		MU_nomadic_tribe_agenda_5
+		MU_nomadic_tribe_agenda_6
+	}
 	influence_from_dev_modifier = 1.0
 }

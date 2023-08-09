@@ -1,0 +1,20 @@
+MU_estate_nobles_maratha_soilder = {
+	icon = privilege_recruit_from_marathi
+	loyalty = 0.1
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+		has_country_flag = MU_vij_march_overlord_unlock_maratha_privilege_flag
+	}
+	can_select = {
+		NOT = {
+			has_estate = estate_maratha
+		}
+	}
+	benefits = {
+		shock_damage = 0.1
+		assault_fort_ability = 0.1
+	}
+}

@@ -72,3 +72,4148 @@ MU_upgrade_building_with_tooltip = {
 		}
 	]
 }
+
+
+#获得特定数量的超越时代的陆军，无custom_tooltip
+#使用时的格式为<province> = { MU_create_army_beyond_time = { value = <value> <type> = yes } }
+#ROOT = location PREV = owner
+MU_create_army_beyond_time = {
+	[[infantry]
+		hidden_effect = {
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+			if = {	#西欧
+				limit = {
+					owner = {
+						unit_type = western
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 28 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						napoleonic_square = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						british_square = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						prussian_frederickian = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						french_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						scottish_highlander = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						dutch_maurician = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						gaelic_free_shooter = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						gaelic_mercenary = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						gaelic_galloglaigh = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#东方
+				limit = {
+					owner = {
+						unit_type = eastern
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						russian_mass = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						russian_green_coat = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						russian_petrine = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						saxon_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						polish_tercio = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						muscovite_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						germanized_pike = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						eastern_militia = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#安纳托利亚
+				limit = {
+					owner = {
+						unit_type = ottoman
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_new_model = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						eastern_carabinier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_nizami_cedid = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_reformed_janissary = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_sekban = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_janissary = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_azab = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#穆斯林
+				limit = {
+					owner = {
+						unit_type = muslim
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						persian_rifle = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						muslim_mass_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						durrani_rifled_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						afsharid_reformed_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						tofongchis_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						persian_shamshir = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						mamluk_duel = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#印度
+				limit = {
+					owner = {
+						unit_type = indian
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						tipu_sultan_rocket = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						indian_rifle = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						maharathan_guerilla_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						bhonsle_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_mughal_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						mughal_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						indian_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#中华
+				limit = {
+					owner = {
+						unit_type = chinese
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_asian_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						asian_musketeer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						asian_mass_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						han_banner = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						asian_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						japanese_footsoldier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#游牧
+				limit = {
+					owner = {
+						unit_type = nomad_group
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_steppe_rifles = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_rifles = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_musketeers = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_footmen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_raiders = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#西非
+				limit = {
+					owner = {
+						unit_type = sub_saharan
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_western_franchise_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						westernized_ethiopian = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 15 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ethiopian_guerilla_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ethiopian_gunpowder_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ethiopian_mountain_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						mali_tribal_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#北美
+				limit = {
+					owner = {
+						unit_type = north_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						american_western_franchise_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						apache_guerilla = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						iroquois_rifle_scout = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						creek_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						native_indian_mountain_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						algonkin_tomahawk_charge = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#中美洲
+				limit = {
+					owner = {
+						unit_type = mesoamerican
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						westernized_mayan = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						westernized_zapotec = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						maya_guerilla_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						zapotec_gunpowder_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						zapotec_plains_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						maya_tribal_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#南美
+				limit = {
+					owner = {
+						unit_type = south_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_westernized_incan = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						westernized_incan = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						peruvian_guerilla_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_reformed_gunpowder_warfare = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						incan_axemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#澳洲
+				limit = {
+					owner = {
+						unit_type = aboriginal_tech
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_guerrillas = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_riflemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_tasmanian_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_outback_warriors = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_reformed_boomerang = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#波利尼西亚
+				limit = {
+					owner = {
+						unit_type = polynesian_tech
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_guerrillas = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_riflemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_arquebusier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_island_warriors = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_reformed_spearman = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#高等美洲
+				limit = {
+					owner = {
+						unit_type = high_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_reformed_xoloti = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_reformed_influenced_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_foreign_influenced_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 12 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_xoloti = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 9 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_xiuhtecuhtlian_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 5 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_xiuhtecuhtli_soldier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ha_reformed_xantican_warrior = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+		}
+	]
+	[[cavalry]
+		hidden_effect = {
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+			if = {	#西欧
+				limit = {
+					owner = {
+						unit_type = western
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						french_cuirassier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						french_carabinier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						austrian_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						swedish_gallop = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						french_caracolle = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						schwarze_reiter = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#东方
+				limit = {
+					owner = {
+						unit_type = eastern
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						russian_cossack = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 22 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						tartar_cossack = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						muscovite_cossack = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						zaporoghian_cossack = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						hungarian_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						slavic_stradioti = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#安纳托利亚
+				limit = {
+					owner = {
+						unit_type = ottoman
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 26 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_lancer = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_eastern_skirmisher = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_toprakli_hit_and_run = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_reformed_spahi = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_spahi = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ottoman_timariot = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#穆斯林
+				limit = {
+					owner = {
+						unit_type = muslim
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						durrani_swivel = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						ali_bey_reformed_infantry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						afsharid_reformed = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						topchis_artillery = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						qizilbash_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						shaybani = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#印度
+				limit = {
+					owner = {
+						unit_type = indian
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						bhonsle_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 17 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						indian_shock_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						maharathan_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_mughal_mansabdar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						indian_elephant = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						mughal_mansabdar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#中华
+				limit = {
+					owner = {
+						unit_type = chinese
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						reformed_asian_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 17 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						chinese_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						manchu_banner = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						asian_charge_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						east_mongolian_steppe = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						japanese_samurai = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#游牧
+				limit = {
+					owner = {
+						unit_type = nomad_group
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_uhlans = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_mounted_raiders = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_lancers = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						steppe_riders = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#西非
+				limit = {
+					owner = {
+						unit_type = sub_saharan
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 23 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_cuirassier = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 17 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_swarm = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_abyssinian_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						african_tuareg_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#北美
+				limit = {
+					owner = {
+						unit_type = north_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						sioux_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						commanche_swarm = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						north_american_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						north_american_rifle_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						native_indian_horsemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#中美洲
+				limit = {
+					owner = {
+						unit_type = mesoamerican
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						central_american_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						central_american_swarm = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						central_american_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						central_american_rifle_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						central_american_horsemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#南美
+				limit = {
+					owner = {
+						unit_type = south_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_swarm = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_rifle_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						south_american_horsemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#澳洲原住民
+				limit = {
+					owner = {
+						unit_type = aboriginal_tech
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_swarm_cav = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						aboriginal_horseman = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#波利尼西亚
+				limit = {
+					owner = {
+						unit_type = polynesian_tech
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 18 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_swarm_cav = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						pacific_horseman = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			if = {	#高等美洲
+				limit = {
+					owner = {
+						unit_type = high_american
+					}
+				}
+				if = {
+					limit = { owner = { mil_tech = 19 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						high_american_dragoon = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 14 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						high_american_swarm = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 10 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						high_american_hussar = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 6 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						high_american_rifle_cavalry = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = { owner = { mil_tech = 1 } }
+					while = {
+						limit = {
+							owner = {
+								NOT = {
+									check_variable = {
+										which = muCreatArmyBeyondTimeCount
+										value = $value$
+									}
+								}
+							}
+						}
+						high_american_horsemen = PREV
+						owner = {
+							change_variable = {
+								which = muCreatArmyBeyondTimeCount
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+		}
+	]
+	[[artillery]
+		hidden_effect = {
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+			if = {
+				limit = { owner = { mil_tech = 25 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					grand_battery = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 22 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					licorne = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 20 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					coehorn_mortar = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 18 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					howitzer = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 16 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					chambered_cannon = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 13 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					demi_culverin = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 10 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					large_cast_iron_bombard = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 7 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					pedrero = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { owner = { mil_tech = 1 } }
+				while = {
+					limit = {
+						owner = {
+							NOT = {
+								check_variable = {
+									which = muCreatArmyBeyondTimeCount
+									value = $value$
+								}
+							}
+						}
+					}
+					houfnice = PREV
+					owner = {
+						change_variable = {
+							which = muCreatArmyBeyondTimeCount
+							value = 1
+						}
+					}
+				}
+			}
+			owner = {
+				set_variable = {
+					which = muCreatArmyBeyondTimeCount
+					value = 0
+				}
+			}
+		}
+	]
+}

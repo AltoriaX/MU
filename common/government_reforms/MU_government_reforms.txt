@@ -19,17 +19,41 @@ mongolian_shackles = {
 	}
 
 	custom_attributes = {
-		enables_estate_nomadic_tribes = yes
+		enables_estate_daamaad = yes
 		seizing_land_loyalty = yes
 		mu_mechanic_can_give_agendas_without_interaction = yes
 	}
 
-	# conditional = {
-		# allow = { has_dlc = "Cradle of Civilization" }
-		# government_abilities = {
-			# iqta_mechanic
-		# }
-	# }
+	conditional = {
+		allow = {
+			always = yes
+		}
+		custom_attributes = {
+			mu_empty_custom_attributes = yes
+			# parliament_vs_monarchy_mechanic
+		}
+	}
+
+	conditional = {
+		allow = {
+			always = yes
+		}
+		government_abilities = {
+			MU_tribe_rule_mechanic
+			# parliament_vs_monarchy_mechanic
+		}
+	}
+
+	conditional = {
+		allow = {
+			NOT = {
+				has_country_flag = MU_gek_unlock_tribe_rule_mechanic_flag
+			}
+		}
+		custom_attributes = {
+			mu_mechanic_have_not_unlock_tribe_rule_mechanic = yes
+		}
+	}
 	ai = {
 		factor = 0
 	}

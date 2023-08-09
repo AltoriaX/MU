@@ -1,0 +1,112 @@
+teaching_mani = {
+	sprite = "GFX_teaching_mani"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_zoroaster = {
+	sprite = "GFX_teaching_zoroaster"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_jesus = {
+	sprite = "GFX_teaching_jesus"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_buddha = {
+	sprite = "GFX_teaching_buddha"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+
+teaching_muhammad = {
+	sprite = "GFX_teaching_muhammad"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_confucius = {
+	sprite = "GFX_teaching_confucius"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_tengri = {
+	sprite = "GFX_teaching_tengri"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}
+
+teaching_moses = {
+	sprite = "GFX_teaching_moses"
+	cost = 100
+	trigger = {
+		always = no
+	}
+	effect = {
+		add_adm_power = 1
+	}
+	ai_will_do = {
+		factor = 2
+	}
+}

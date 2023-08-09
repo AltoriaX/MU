@@ -1,0 +1,137 @@
+MU_tax_market = {
+	start = 522
+	date = 1900.1.1
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 0
+	type = monument
+
+	build_trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = MU_unlock_monument_tt
+				has_country_flag = MU_gek_unlock_tax_market_monument_flag
+			}
+		}
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = MU_unlock_monument_tt
+				has_country_flag = MU_gek_unlock_tax_market_monument_flag
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			custom_trigger_tooltip = {
+				tooltip = MU_unlock_monument_tt
+				has_country_flag = MU_gek_unlock_tax_market_monument_flag
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			trade_value = 0.5
+			province_trade_power_modifier = 0.25
+		}
+		country_modifiers = {
+			burghers_loyalty_modifier = 0.05
+			jains_loyalty_modifier = 0.05
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			trade_value = 1
+			province_trade_power_modifier = 0.5
+		}
+		country_modifiers = {
+			merchants = 1
+			inflation_reduction = 0.05
+			burghers_loyalty_modifier = 0.1
+			jains_loyalty_modifier = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			trade_value = 2
+			province_trade_power_modifier = 1.0
+		}
+		country_modifiers = {
+			trade_company_governing_cost = -0.15
+			merchants = 1
+			inflation_reduction = 0.1
+			burghers_loyalty_modifier = 0.15
+			jains_loyalty_modifier = 0.15
+		}
+		on_upgraded = {
+			custom_tooltip = MU_reduce_requirement_propagate_religion_policy_tt
+			hidden_effect = {
+				owner = {
+					set_country_flag = MU_reduce_requirement_propagate_religion_policy_flag
+				}
+			}
+		}
+	}
+}

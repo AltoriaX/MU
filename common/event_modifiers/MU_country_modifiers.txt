@@ -44,7 +44,6 @@ MU_gek_conquer_vij_mod = {
 
 MU_gek_unify_india_mod = {
 	ae_impact = -0.15
-	global_tax_modifier = 0.15
 	years_of_nationalism = -5
 }
 
@@ -137,16 +136,15 @@ MU_gek_go_to_prosperous_mod = {
 
 MU_gek_spread_ture_faith_mod = {
 	global_missionary_strength = 0.02
-	prestige_per_development_from_conversion = 1.0
-	missionaries = 1
+	prestige_per_development_from_conversion = 0.5
 }
 
 MU_gek_son_of_timurid_mod = {
-	monthly_piety_accelerator = 0.005
+	monthly_piety_accelerator = 0.002
 }
 
 MU_gek_praise_timurid_mod = {
-	monthly_piety = 0.5
+	monthly_piety = 0.2
 }
 
 MU_gek_against_hinduism_mod = {
@@ -164,4 +162,64 @@ MU_gek_shadow_of_lord_mod = {
 	warscore_cost_vs_other_religion = -0.1
 	missionaries = 1
 	global_missionary_strength = 0.01
+}
+
+MU_gek_vij_march_mod = {
+	liberty_desire = -100
+}
+
+MU_vij_march_peace = {
+	global_unrest = -2
+}
+
+MU_vij_march_india_trade_mod = {
+	global_trade_power = 0.2
+	global_trade_goods_size = 0.1
+}
+
+MU_vij_march_develop_mod = {
+	development_cost = -0.1
+	development_cost_modifier = -0.05
+}
+
+MU_vij_march_ship_mod = {
+	naval_forcelimit_modifier = 0.33
+	global_sailors_modifier = 0.2
+	naval_morale = 0.1
+	navy_tradition = 1
+	global_ship_repair = 0.5
+}
+
+MU_vij_march_sailor_mod = {
+	global_sailors_modifier = 0.2
+	navy_tradition = 1
+	global_ship_repair = 0.5
+}
+
+MU_vij_march_exp_mod = {
+	overextension_impact_modifier = -0.1
+	administrative_efficiency = 0.05
+}
+
+MU_vij_march_army_mod = {
+	global_regiment_cost = -0.2
+	land_forcelimit = 18
+	land_forcelimit_modifier = 0.33
+}
+
+MU_vij_march_frontier_mod = {
+	global_garrison_growth = 0.2
+	fort_maintenance_modifier = -0.1
+}
+
+MU_estate_daamaad_civil_service_loyal = {
+	core_creation = -0.15
+}
+
+MU_estate_daamaad_civil_service_neutral = {
+	core_creation = -0.1
+}
+
+MU_estate_daamaad_civil_service_disloyal = {
+	core_creation = 0.1
 }
