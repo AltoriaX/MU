@@ -1,0 +1,6 @@
+spriteTypes = {
+        spriteType = {
+		name = "GFX_great_project_MU_tax_market"	
+		texturefile = "gfx//interface//MU_great_projects//MU_tax_market.dds"
+	}
+}
