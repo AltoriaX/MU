@@ -1,0 +1,17 @@
+#此文件会设置阶层特权界面的影响力和忠诚度图标，将相应.dss图片，放置到gfx/interface/ideas_EU4文件夹中即可，无需interface
+estate_daamaad = {
+	modifier_definition = {
+		type = loyalty
+		key = daamaad_loyalty_modifier
+		trigger = {
+			has_estate = estate_daamaad
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = daamaad_influence_modifier
+		trigger = {
+			has_estate = estate_daamaad
+		}
+	}
+}

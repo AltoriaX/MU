@@ -1,0 +1,41 @@
+country_decisions = {
+	MU_daamaad_emergency_conscription_decision = {
+		title = MU_daamaad_emergency_conscription_decision.t
+		desc = MU_daamaad_emergency_conscription_decision.d
+		color = { 195 160 20 }
+		potential = {
+			has_country_flag = enable_estate_action_MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+			has_estate = estate_daamaad
+		}
+		allow = {
+			has_not_any_estate_disaster_active = yes
+			if = {
+				limit = {
+					has_estate = estate_daamaad
+				}
+				estate_loyalty = {
+					estate = estate_daamaad
+					loyalty = 30
+				}
+			}
+			estate_action_off_cooldown = {
+				estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+				days = 7300
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+			}
+			estate_action = {
+				estate_action = MU_DAAMAAD_GRANT_GENERALSHIP_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_daamaad
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

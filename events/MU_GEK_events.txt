@@ -294,7 +294,7 @@ country_event = {
 	id = MU_gek_events.6
 	title = MU_gek_events.6.t
 	desc = MU_gek_events.6.d
-	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	picture = MONGOL_BANNERS_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -830,4 +830,87 @@ country_event = {
 		}
 	}
 
+}
+
+country_event = {
+	id = MU_gek_events.12
+	title = MU_gek_events.12.t
+	desc = MU_gek_events.12.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	after = {
+	}
+	
+	#release VIJ
+	option = {
+		highlight = yes
+		name = MU_gek_events.12.a
+		trigger = {
+			NOT = { exists = VIJ }
+		}
+		hidden_effect = {
+			every_province = {
+				remove_core = VIJ
+				remove_claim = VIJ
+			}
+			every_owned_province = {
+				limit = {
+					any_trade_node_member_province = { province_id = 1340 } 
+				}
+				remove_core = ROOT
+				remove_claim = ROOT
+				add_core = VIJ
+			}
+			release = VIJ
+			VIJ = {
+				change_religion = sunni
+				set_religious_school = {
+					group = muslim
+					school = hanafi_school
+				}
+			}
+		}
+		custom_tooltip = MU_gek_release_vij_tt
+		create_march = VIJ
+		VIJ = {
+			override_country_name = MU_DECCAN_VICEROYALTY
+			add_country_modifier = {
+				name = MU_gek_vij_march_mod
+				duration = -1
+			}
+			custom_tooltip = MU_gek_vij_get_claim_tt
+			set_country_flag = MU_vij_march_mission_flag
+			set_country_flag = disables_estate_brahmins_flag
+			set_country_flag = disables_estate_dhimmi_flag
+		}
+		hidden_effect = {
+			every_province = {
+				limit = {
+					any_trade_node_member_province = { province_id = 1340 } 
+				}
+				add_permanent_claim = VIJ
+			}
+			VIJ = {
+				swap_non_generic_missions = yes
+				overlord = {
+					save_global_event_target_as = MU_vij_march_overlord_target
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#why?
+	option = {
+		name = MU_gek_events.12.b
+		ai_chance = {
+			factor = 0
+		}
+	}
 }

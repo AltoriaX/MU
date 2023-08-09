@@ -1,7 +1,7 @@
 namespace = estate_privileges_and_agendas_events
 
 #The rights of the nobility
-country_event = {
+country_event = {	#选举君主制的事件，与贵族相关#c
 	id = estate_privileges_and_agendas_events.1
 	title = estate_privileges_and_agendas_events.1.name
 	desc = estate_privileges_and_agendas_events.1.desc
@@ -110,7 +110,7 @@ country_event = {
 }
 
 # Estates bailing out the player
-country_event = {
+country_event = {	#低王领的回收王领事件#c
 	id = estate_privileges_and_agendas_events.2
 	title = estate_privileges_and_agendas_events.2.name
 	desc = estate_privileges_and_agendas_events.2.desc
@@ -204,7 +204,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#议事会议程#c
 	id = estate_privileges_and_agendas_events.3
 	title = estate_privileges_and_agendas_events.3.name
 	desc = estate_privileges_and_agendas_events.3.desc
@@ -223,26 +223,36 @@ country_event = {
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 		}
-
-		###  MU  ###
-		hidden_effect = {
-			if = {
-				limit = {
-					has_government_mechanic = MU_tribe_rule_mechanic
-				}
+		if = {
+			limit = {
+				has_country_flag = MU_gek_tribe_control_council_flag
+				has_estate = estate_daamaad
+			}
+			hidden_effect = {
+				clr_country_flag = estate_brahmins_present_agenda
+				clr_country_flag = estate_church_present_agenda
+				clr_country_flag = estate_maratha_present_agenda
+				clr_country_flag = estate_nobles_present_agenda
+				clr_country_flag = estate_burghers_present_agenda
+				clr_country_flag = estate_vaisyas_present_agenda
+				clr_country_flag = estate_cossacks_present_agenda
+				clr_country_flag = estate_nomadic_tribes_present_agenda
+				clr_country_flag = estate_dhimmi_present_agenda
+				clr_country_flag = estate_jains_present_agenda
+				clr_country_flag = estate_rajput_present_agenda
+				clr_country_flag = estate_janissaries_present_agenda
+				clr_country_flag = estate_eunuchs_present_agenda
+			}
+		}
+		if = {
+			limit = {
+				has_government_mechanic = MU_tribe_rule_mechanic
+			}
+			hidden_effect = {
 				add_government_power = {
 					mechanic_type = MU_tribe_rule_mechanic
 					power_type = MU_tribe_rule_power
 					value = -5
-				}
-			}
-			if = {
-				limit = {
-					has_government_attribute = mu_mechanic_council_reduce_tribe_land
-				}
-				change_estate_land_share = {
-					estate = estate_nomadic_tribes
-					share = -5
 				}
 			}
 		}
@@ -262,18 +272,13 @@ country_event = {
 		clr_country_flag = estate_rajput_present_agenda
 		clr_country_flag = estate_janissaries_present_agenda
 		clr_country_flag = estate_eunuchs_present_agenda
+		clr_country_flag = estate_daamaad_present_agenda
 		clear_estate_agenda_cache = ROOT
 	}
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.a
-		trigger = {
-			has_country_flag = estate_brahmins_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_brahmins_present_agenda }
 		start_estate_agenda = estate_brahmins
 		goto = estate_brahmins
 		ai_chance = {
@@ -320,13 +325,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.b
-		trigger = {
-			has_country_flag = estate_church_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_church_present_agenda }
 		start_estate_agenda = estate_church
 		goto = estate_church
 		ai_chance = {
@@ -373,13 +372,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.c
-		trigger = {
-			has_country_flag = estate_maratha_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_maratha_present_agenda }
 		start_estate_agenda = estate_maratha
 		goto = estate_maratha
 		ai_chance = {
@@ -426,13 +419,7 @@ country_event = {
 	
 	option = {
 		name = estate_privileges_and_agendas_events.3.k
-		trigger = {
-			has_country_flag = estate_rajput_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_rajput_present_agenda }
 		start_estate_agenda = estate_rajput
 		goto = estate_rajput
 		ai_chance = {
@@ -479,13 +466,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.d
-		trigger = {
-			has_country_flag = estate_nobles_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_nobles_present_agenda }
 		start_estate_agenda = estate_nobles
 		goto = estate_nobles
 		ai_chance = {
@@ -532,13 +513,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.e
-		trigger = {
-			has_country_flag = estate_burghers_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_burghers_present_agenda }
 		start_estate_agenda = estate_burghers
 		goto = estate_burghers
 		ai_chance = {
@@ -585,13 +560,7 @@ country_event = {
 	
 	option = {
 		name = estate_privileges_and_agendas_events.3.j
-		trigger = {
-			has_country_flag = estate_jains_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_jains_present_agenda }
 		start_estate_agenda = estate_jains
 		goto = estate_jains
 		ai_chance = {
@@ -638,13 +607,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.f
-		trigger = {
-			has_country_flag = estate_vaisyas_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_vaisyas_present_agenda }
 		start_estate_agenda = estate_vaisyas
 		goto = estate_vaisyas
 		ai_chance = {
@@ -691,13 +654,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.g
-		trigger = {
-			has_country_flag = estate_cossacks_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_cossacks_present_agenda }
 		start_estate_agenda = estate_cossacks
 		goto = estate_cossacks
 		ai_chance = {
@@ -744,9 +701,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.h
-		trigger = {
-			has_country_flag = estate_nomadic_tribes_present_agenda
-		}
+		trigger = { has_country_flag = estate_nomadic_tribes_present_agenda }
 		start_estate_agenda = estate_nomadic_tribes
 		goto = estate_nomadic_tribes
 		ai_chance = {
@@ -793,13 +748,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.i
-		trigger = {
-			has_country_flag = estate_dhimmi_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_dhimmi_present_agenda }
 		start_estate_agenda = estate_dhimmi
 		goto = estate_dhimmi
 		ai_chance = {
@@ -846,14 +795,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.l
-		trigger = {
-			has_country_flag = estate_janissaries_present_agenda
-			NOT = { has_disaster = tur_disaster_janissary_coup }
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_janissaries_present_agenda NOT = { has_disaster = tur_disaster_janissary_coup } }
 		start_estate_agenda = estate_janissaries
 		goto = estate_janissaries
 		ai_chance = {
@@ -900,13 +842,7 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.m
-		trigger = {
-			has_country_flag = estate_eunuchs_present_agenda
-			OR = {
-				NOT = { has_estate = estate_nomadic_tribes }
-				NOT = { has_country_flag = MU_gek_tribe_control_council_flag }
-			}
-		}
+		trigger = { has_country_flag = estate_eunuchs_present_agenda }
 		start_estate_agenda = estate_eunuchs
 		goto = estate_eunuchs
 		ai_chance = {
@@ -950,9 +886,67 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.3.n
+		trigger = {
+			has_country_flag = estate_daamaad_present_agenda
+			if = {
+				limit = {
+					OR = {
+						tag = GEK
+						was_tag = GEK
+					}
+				}
+				has_country_flag = MU_gek_tribe_control_council_flag
+			}
+		}
+		start_estate_agenda = estate_daamaad
+		goto = estate_daamaad
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_daamaad
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_daamaad
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_daamaad
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_daamaad
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_daamaad
+					higher_than_influence = no
+				}
+			}
+		}
+	}
 }
 
-country_event = {
+country_event = {	#自动开会的隐藏事件#c
 	id = estate_privileges_and_agendas_events.4
 	title = estate_privileges_and_agendas_events.4.name
 	desc = estate_privileges_and_agendas_events.4.desc
@@ -966,9 +960,7 @@ country_event = {
 			has_estate_privilege = estate_nobles_supremacy_over_crown
 			has_estate_privilege = estate_brahmins_supremacy_over_crown
 			has_estate_privilege = estate_eunuchs_supremacy_over_crown_privilege
-			has_government_attribute = {
-				mu_mechanic_can_give_agendas_without_interaction
-			}
+			has_government_attribute = mu_mechanic_can_give_agendas_without_interaction
 		}
 		NOT = { has_any_active_estate_agenda = yes }
 	}
@@ -984,7 +976,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = {	#热带城市建设规划特权的隐藏事件，不用管#c
 	id = estate_privileges_and_agendas_events.5 #Tropical City Planning Update
 	title = estate_privileges_and_agendas_events.5.name
 	desc = estate_privileges_and_agendas_events.5.desc
@@ -1020,7 +1012,7 @@ country_event = {
 }
 
 #Distribute manually land
-country_event = {
+country_event = {	#向特定阶层出售王领的事件
 	id = estate_privileges_and_agendas_events.6
 	title = estate_privileges_and_agendas_events.6.t
 	desc = estate_privileges_and_agendas_events.6.desc
@@ -1237,10 +1229,24 @@ country_event = {
 			factor = 0
 		}
 	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.6.o
+		trigger = { has_estate = estate_daamaad }
+		give_estate_land_share_gigantic = { estate = estate_daamaad }
+		add_estate_loyalty = {
+			estate = estate_daamaad
+			loyalty = 10
+			short = yes
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 #Seize crownland
-country_event = {
+country_event = {	#向特定阶层回收王领的事件
 	id = estate_privileges_and_agendas_events.7
 	title = estate_privileges_and_agendas_events.7.t
 	desc = estate_privileges_and_agendas_events.7.desc
@@ -1475,6 +1481,18 @@ country_event = {
 			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_eunuchs } }
 		}
 		seize_land_estate_effect = { estate = estate_eunuchs }
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.7.o
+		trigger = {
+			has_estate = estate_daamaad
+			NOT = { estate_has_exempt_from_seize_land_privilege = { estate = estate_daamaad } }
+		}
+		seize_land_estate_effect = { estate = estate_daamaad }
 		ai_chance = {
 			factor = 0
 		}
