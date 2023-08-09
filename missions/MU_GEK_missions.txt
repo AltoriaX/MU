@@ -96,14 +96,19 @@ MU_gek_common_branch_1 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_state_edict = edict_centralization_effort
+			}
 			estate_loyalty = {
 				estate = all
-				loyalty = 45
+				loyalty = 50
 			}
 			crown_land_share = 45
 		}
 
 		effect = {
+			change_government_reform_progress = 50
 			add_country_modifier = {
 				name = "MU_gek_loyal_locality_mod"
 				duration = 18250
@@ -132,10 +137,11 @@ MU_gek_common_branch_1 = {
 		effect = {
 			custom_tooltip = MU_gek_remove_tribe_control_council_tt
 			clr_country_flag = MU_gek_tribe_control_council_flag
-			unlock_government_reform = { government_reform = MU_gek_mongolia_centralization_reform } 
-			if = {
-				limit = { reform_level = 2 } 
-				add_government_reform = MU_gek_mongolia_centralization_reform
+			custom_tooltip = empty_line_tt
+			custom_tooltip = MU_gek_unlock_tribe_rule_mechanic_tt
+			set_country_flag = MU_gek_unlock_tribe_rule_mechanic_flag
+			hidden_effect = {
+				regenerate_government_mechanics = yes
 			}
 		}
 	}
@@ -146,14 +152,18 @@ MU_gek_common_branch_1 = {
 		required_missions = { MU_gek_mongolian_centralisation } 
 		provinces_to_highlight = {  } 
 
-		trigger = { has_mil_advisor_2 = yes } 
+		trigger = {
+			has_mil_advisor_2 = yes
+			num_of_generals = 2`
+		}
 
 		effect = {
+			hindusthan_region = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = "MU_gek_prepare_expedition_mod"
 				duration = 7300
 			}
-			hindusthan_region = { add_permanent_claim = ROOT } 
+			custom_tooltip = MU_gek_prepare_expedition_add_manpower
 		}
 	}
 
@@ -162,12 +172,35 @@ MU_gek_common_branch_1 = {
 		position = 7
 		required_missions = { MU_gek_prepare_expedition } 
 		provinces_to_highlight = {
-			region = hindusthan_region
+			OR = {
+				region = hindusthan_region
+				area = ahmedabad_area
+				area = malwa_area
+				area = tapti_area
+				area = khandesh_area
+			}
+
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 
 		trigger = {
 			hindusthan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ahmedabad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			malwa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tapti_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khandesh_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -179,7 +212,7 @@ MU_gek_common_branch_1 = {
 			deccan_region = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = "MU_gek_deep_into_south_mod"
-				duration = 18250
+				duration = 7300
 			}
 		}
 	}
@@ -222,6 +255,10 @@ MU_gek_common_branch_1 = {
 					value = 30
 				}
 			}
+			country_event_with_insight = {
+				id = MU_gek_events.12
+				insight_tooltip = MU_gek_deccan_march_tt
+			}
 		}
 	}
 
@@ -236,19 +273,14 @@ MU_gek_common_branch_1 = {
 		}
 
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
 				custom_trigger_tooltip = {
 					tooltip = MU_gek_belong_coromandel_node_tt
 					any_trade_node_member_province = { province_id = 1340 } 
 				}
 				province_has_center_of_trade_of_level = 1
-			}
-			1340 = {
-				trade_share = {
-					country = ROOT
-					share = 80
-				}
+				has_port = yes
 			}
 		}
 
@@ -256,6 +288,49 @@ MU_gek_common_branch_1 = {
 			add_country_modifier = {
 				name = "MU_gek_unify_india_mod"
 				duration = -1
+			}
+			if = {
+				limit = {
+					2089 = {
+						owned_by = ROOT
+						OR = {
+							has_great_project = {
+								type = murud_janjira
+								tier = 0
+							}
+							has_great_project = {
+								type = murud_janjira
+								tier = 1
+							}
+							has_great_project = {
+								type = murud_janjira
+								tier = 2
+							}
+						}
+					}
+				}
+				2089 = {
+					add_great_project_tier = {
+						type = murud_janjira
+						tier = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_modifier = MU_gek_deep_into_south_mod
+				}
+				custom_tooltip = MU_gek_deep_into_south_permanent_yes_tt
+				hidden_effect = {
+					remove_country_modifier = MU_gek_deep_into_south_mod
+					add_country_modifier = {
+						name = MU_gek_deep_into_south_mod
+						duration = -1
+					}
+				}
+			}
+			else = {
+				custom_tooltip = MU_gek_deep_into_south_permanent_no_tt
 			}
 		}
 	}
@@ -284,6 +359,13 @@ MU_gek_common_branch_2_development = {
 		}
 
 		effect = {
+			capital_scope = {
+				upgrade_building = {
+					trade = yes
+					production = yes
+					tax = yes
+				}
+			}
 			if = {
 				limit = { capital_scope = { NOT = { province_has_center_of_trade_of_level = 3 }  }  } 
 				custom_tooltip = MU_gek_capital_upgrade_center_of_trade_yes_tt
@@ -344,13 +426,6 @@ MU_gek_common_branch_2_development = {
 				}
 				else = { capital_scope = { create_or_add_center_of_trade_level = 1 }  } 
 			}
-			capital_scope = {
-				upgrade_building = {
-					trade = yes
-					production = yes
-					tax = yes
-				}
-			}
 		}
 	}
 
@@ -378,7 +453,6 @@ MU_gek_common_branch_2_development = {
 			}
 			custom_tooltip = empty_line_tt
 			custom_tooltip = MU_gek_encourage_produce_effect_tt
-			hidden_effect = { set_country_flag = MU_gek_encourage_produce_effect_flag } 
 		}
 	}
 
@@ -554,7 +628,7 @@ MU_gek_common_branch_2_expand = {
 
 	MU_gek_tea_and_horse_road = {
 		icon = mission_bengal_campaign
-		position = 8
+		position = 9
 		required_missions = { MU_gek_cross_ganges } 
 		provinces_to_highlight = { province_id = 584 } 
 
@@ -722,6 +796,7 @@ MU_gek_common_branch_3 = {
 				religion = ROOT
 				discount = yes
 			}
+			add_mercantilism = 5
 		}
 	}
 
@@ -883,7 +958,7 @@ MU_gek_common_branch_3 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 300
 				superregion = india_superregion
 			}
@@ -925,8 +1000,41 @@ MU_gek_common_branch_4 = {
 		effect = {
 			add_dip_power = -100
 			custom_tooltip = empty_line_tt
-			custom_tooltip = MU_gek_random_5_province_change_culture_tt
-			tooltip = { change_culture = uzbehk } 
+			if = {
+				limit = {
+					522 = {
+						NOT = {
+							culture = uzbehk
+						}
+					}
+				}
+				522 = {
+					change_culture = uzbehk
+				}
+			}
+			if = {
+				limit = {
+					2062 = {
+						NOT = {
+							culture = uzbehk
+						}
+					}
+				}
+				2062 = {
+					change_culture = uzbehk
+				}
+			}if = {
+				limit = {
+					2060 = {
+						NOT = {
+							culture = uzbehk
+						}
+					}
+				}
+				2060 = {
+					change_culture = uzbehk
+				}
+			}
 			custom_tooltip = empty_line_tt
 			custom_tooltip = MU_gek_raze_add_missionary_strength_tt
 			tooltip = {
@@ -936,46 +1044,6 @@ MU_gek_common_branch_4 = {
 				}
 			}
 			hidden_effect = {
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						NOT = { culture = uzbehk } 
-						NOT = { any_neighbor_province = { culture = uzbehk }  } 
-					}
-					change_culture = uzbehk
-				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						NOT = { culture = uzbehk } 
-						NOT = { any_neighbor_province = { culture = uzbehk }  } 
-					}
-					change_culture = uzbehk
-				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						NOT = { culture = uzbehk } 
-						NOT = { any_neighbor_province = { culture = uzbehk }  } 
-					}
-					change_culture = uzbehk
-				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						NOT = { culture = uzbehk } 
-						NOT = { any_neighbor_province = { culture = uzbehk }  } 
-					}
-					change_culture = uzbehk
-				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						NOT = { culture = uzbehk } 
-						NOT = { any_neighbor_province = { culture = uzbehk }  } 
-					}
-					change_culture = uzbehk
-				}
 				set_country_flag = MU_gek_raze_add_missionary_strength_flag
 			}
 		}
@@ -1122,7 +1190,9 @@ MU_gek_common_branch_4 = {
 		icon = mission_rb_monopolize_the_channel
 		position = 9
 		required_missions = { MU_gek_expand_inclusive_tax_system } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			province_id = 522
+		} 
 
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1158,7 +1228,7 @@ MU_gek_common_branch_5 = {
 
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 40
 				religion = ROOT
 			}
 		}
@@ -1203,6 +1273,10 @@ MU_gek_common_branch_5 = {
 					name = "MU_gek_praise_timurid_mod"
 					duration = -1
 				}
+			}
+			custom_tooltip = MU_gek_general_recruited_accelerator_mod
+			hidden_effect = {
+				set_country_flag = MU_gek_general_recruited_accelerator_flag
 			}
 		}
 	}
@@ -1303,7 +1377,7 @@ MU_gek_common_branch_5 = {
 				tooltip = MU_gek_converted_50_province_tt
 				check_variable = {
 					which = num_converted_religion
-					value = 50
+					value = 150
 				}
 			}
 		}

@@ -1,0 +1,757 @@
+MU_vij_march_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIJ
+		has_country_flag = MU_vij_march_mission_flag
+	} 
+
+	MU_vij_march_recovery_rule = {
+		icon = mission_have_two_subjects
+		position = 2
+		required_missions = { MU_vij_march_establish_march } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			unrest = 1
+		} 
+
+		trigger = {
+			NOT = { average_unrest = 3 }
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+		} 
+
+		effect = {
+			event_target:MU_vij_march_overlord_target = {
+				add_trust = {
+					who = ROOT
+					value = 25
+					mutual = yes
+				}
+			}
+			add_country_modifier = {
+				name = MU_vij_march_peace
+				duration = 18250
+			}
+		} 
+	}
+
+	MU_vij_march_spice = {
+		icon = mission_rb_colonise_spice_islands
+		position = 3
+		required_missions = { MU_vij_march_recovery_rule } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			trade_goods = spices
+			NOT = { has_production_building_trigger = yes }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = spices
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			custom_tooltip = MU_vij_march_spice_tt
+			custom_tooltip = MU_upgrade_production_building_tt
+			custom_tooltip = MU_add_2_production_tt
+			tooltip = {
+				add_permanent_province_modifier = {
+					name = MU_vij_march_spices_mod
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = spices
+						has_production_building_trigger = yes
+					}
+					add_base_production = 2
+					upgrade_building = {
+						production = yes
+					}
+					add_permanent_province_modifier = {
+						name = MU_vij_march_spices_mod
+						duration = -1
+					}
+				}
+				event_target:MU_vij_march_overlord_target = {
+					every_owned_province = {
+						limit = {
+							trade_goods = spices
+							has_production_building_trigger = yes
+						}
+						add_base_production = 2
+						upgrade_building = {
+							production = yes
+						}
+						add_permanent_province_modifier = {
+							name = MU_vij_march_spices_mod
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_trade_muslim = {
+		icon = mission_dominate_gujarati_trade
+		position = 4
+		required_missions = {
+			MU_vij_march_spice
+			MU_vij_march_temple
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			province_has_center_of_trade_of_level = 1
+			NOT = { province_has_center_of_trade_of_level = 3 }
+			superregion = india_superregion
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				has_port = yes
+				province_has_center_of_trade_of_level = 3
+				superregion = india_superregion
+			}
+		} 
+
+		effect = {
+			custom_tooltip = MU_vij_march_spice_tt
+			tooltip = {
+				add_permanent_province_modifier = {
+					name = MU_vij_march_muslim_scholar_mod
+					duration = -1
+				}
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_dip_tech = 1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_port = yes
+						province_has_center_of_trade_of_level = 3
+						superregion = india_superregion
+					}
+					add_permanent_province_modifier = {
+						name = MU_vij_march_muslim_scholar_mod
+						duration = -1
+					}
+				}
+				event_target:MU_vij_march_overlord_target = {
+					every_owned_province = {
+						limit = {
+							has_port = yes
+							province_has_center_of_trade_of_level = 3
+							superregion = india_superregion
+						}
+						add_permanent_province_modifier = {
+							name = MU_vij_march_muslim_scholar_mod
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_world_center = {
+		icon = mission_rb_inland_india
+		position = 5
+		required_missions = { MU_vij_march_trade_muslim } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = MU_vij_march_has_highest_node_tt
+				OR = {
+					any_owned_province = {
+						highest_value_trade_node = yes
+						is_strongest_trade_power = ROOT
+					}
+					event_target:MU_vij_march_overlord_target = {
+						any_owned_province = {
+							highest_value_trade_node = yes
+							is_strongest_trade_power = event_target:MU_vij_march_overlord_target
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = MU_vij_march_india_trade_mod
+				duration = -1
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_country_modifier = {
+					name = MU_vij_march_india_trade_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+MU_vij_march_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIJ
+		has_country_flag = MU_vij_march_mission_flag
+	} 
+
+	MU_vij_march_missionary = {
+		icon = mission_hands_praying
+		position = 2
+		required_missions = { MU_vij_march_establish_march } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				religion = ROOT
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					has_idea_group = religious_ideas
+				}
+				add_adm_power = 300
+				event_target:MU_vij_march_overlord_target = {
+					add_adm_power = 300
+				}
+			}
+			else = {
+				add_idea_group = religious_ideas
+				add_adm_power = 100
+				event_target:MU_vij_march_overlord_target = {
+					add_adm_power = 100
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_temple = {
+		icon = mission_central_asian_city
+		position = 3
+		required_missions = {
+			MU_vij_march_missionary
+			MU_vij_march_fix_city
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_tax_building_trigger = yes }
+		} 
+
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 20
+					religion = ROOT
+					has_tax_building_trigger = yes
+				}
+				full_idea_group = religious_ideas
+			}
+		} 
+
+		effect = {
+			event_target:MU_vij_march_overlord_target = {
+				change_ruler_stat = {
+					stat = adm
+					amount = 1
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_india_muslim = {
+		icon = mission_conquer_gujarat_bah
+		position = 5
+		required_missions = {
+			MU_vij_march_temple
+			MU_vij_march_coromandel
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { religion = ROOT }
+		} 
+
+		trigger = {
+			all_owned_province = {
+				religion = ROOT
+			}
+			event_target:MU_vij_march_overlord_target = {
+				is_defender_of_faith = yes
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = MU_vij_march_india_muslim_center_mod
+					duration = -1
+				}
+			}
+			event_target:MU_vij_march_overlord_target = {
+				capital_scope = {
+					add_permanent_province_modifier = {
+						name = MU_vij_march_india_muslim_center_mod
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}
+MU_vij_march_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIJ
+		has_country_flag = MU_vij_march_mission_flag
+	} 
+
+	MU_vij_march_establish_march = {
+		icon = mission_viceroyalty_of_the_deccan
+		position = 1
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			is_subject = yes
+		} 
+
+		effect = {
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+		} 
+	}
+
+	MU_vij_march_fix_city = {
+		icon = mission_city_of_victory_bah
+		position = 2
+		required_missions = { MU_vij_march_establish_march } 
+		provinces_to_highlight = {
+			province_id = 541
+		} 
+
+		trigger = {
+			541 = {
+				development = 30
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			custom_tooltip = MU_vij_march_can_use_hampi_tt
+			custom_tooltip = empty_line_tt
+			add_country_modifier = {
+				name = MU_vij_march_develop_mod
+				duration = 7300
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_country_modifier = {
+					name = MU_vij_march_develop_mod
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				set_country_flag = MU_vij_march_can_use_hampi_flag
+				event_target:MU_vij_march_overlord_target = {
+					set_country_flag = MU_vij_march_can_use_hampi_flag
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_coromandel = {
+		icon = mission_coromandel_trade
+		position = 4
+		required_missions = { MU_vij_march_fix_city } 
+		provinces_to_highlight = {
+			any_trade_node_member_province = {
+				province_id = 1340
+			}
+			NOT = { owned_by = ROOT }
+			superregion = india_superregion
+		} 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = MU_vij_march_has_coromandel_tt
+				num_of_owned_provinces_with = {
+					value = 49
+					any_trade_node_member_province = { province_id = 1340 } 
+					superregion = india_superregion
+				}
+			}
+		} 
+
+		effect = {
+			change_ruler_stat = {
+				stat = adm
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = dip
+				amount = 1
+			}
+			change_ruler_stat = {
+				stat = mil
+				amount = 1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					add_devastation = -100
+					add_local_autonomy = -100
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_deccan = {
+		icon = mission_metropolis_of_the_deccan
+		position = 6
+		required_missions = {
+			MU_vij_march_world_center
+			MU_vij_march_india_muslim
+			MU_vij_march_coromandel
+			MU_vij_march_exp
+			MU_vij_march_frontier
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { exists = DEC }
+				NOT = { exists = DEC }
+			}
+			full_idea_group = VIJ_ideas
+		} 
+
+		effect = {
+			change_tag = DEC
+			custom_tooltip = MU_vij_march_deccan_effect_tt
+			hidden_effect = {
+				set_country_flag = MU_vij_march_use_deccan_march_idea_flag
+				swap_free_idea_group = yes
+				change_country_color = {
+					country = event_target:MU_vij_march_overlord_target
+				}
+				add_historical_friend = event_target:MU_vij_march_overlord_target
+				event_target:MU_vij_march_overlord_target = {
+					add_historical_friend = ROOT
+				}
+			}
+		} 
+	}
+}
+MU_vij_march_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIJ
+		has_country_flag = MU_vij_march_mission_flag
+	} 
+
+	MU_vij_march_ship = {
+		icon = mission_early_game_buildings
+		position = 2
+		required_missions = { MU_vij_march_establish_march } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			NOT = { has_shipyard_building_trigger = yes }
+			NOT = { has_dock_building_trigger = yes }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_port = yes
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = MU_vij_march_ship_mod
+				duration = -1
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_country_modifier = {
+					name = MU_vij_march_sailor_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	MU_vij_march_joint_exercises = {
+		icon = mission_ottoman_early_army
+		position = 3
+		required_missions = {
+			MU_vij_march_ship
+			MU_vij_march_army
+		}
+		provinces_to_highlight = {
+			province_id = 541
+		} 
+
+		trigger = {
+			event_target:MU_vij_march_overlord_target = {
+				OR = {
+					army_tradition = 60
+					army_professionalism = 0.25
+				}
+			}
+			541 = {
+				num_of_units_in_province = {
+					who = event_target:MU_vij_march_overlord_target
+					type = all
+					amount = 50
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = MU_vij_march_unlock_joint_exercises_decision_tt
+			custom_tooltip = empty_line_tt
+			hidden_effect = {
+				event_target:MU_vij_march_overlord_target = {
+					set_country_flag = MU_vij_march_unlock_joint_exercises_decision_flag
+				}
+			}
+			add_army_professionalism = 0.1
+			event_target:MU_vij_march_overlord_target = {
+				add_army_professionalism = 0.1
+			}
+		} 
+	}
+
+	MU_vij_march_improve_relationship = {
+		icon = mission_gharbianss
+		position = 4
+		required_missions = { MU_vij_march_joint_exercises } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_divert_trade = yes
+			has_subsidize_armies = yes
+			has_send_officers = yes
+			trust = {
+				who = event_target:MU_vij_march_overlord_target
+				value = 100
+			}
+		} 
+
+		effect = {
+			add_historical_friend = event_target:MU_vij_march_overlord_target
+			event_target:MU_vij_march_overlord_target = {
+				add_historical_friend = ROOT
+			}
+		} 
+	}
+
+	MU_vij_march_exp = {
+		icon = mission_indian_empire
+		position = 5
+		required_missions = {
+			MU_vij_march_coromandel
+			MU_vij_march_improve_relationship
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				event_target:MU_vij_march_overlord_target = {
+					full_idea_group = influence_ideas
+				}
+				NOT = { average_autonomy_above_min = 10 }
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = { NOT = { stability = 2 } }
+				add_stability = 2
+			}
+			else_if = {
+				limit = { NOT = { stability = 3 } }
+				add_stability = 1
+				add_adm_power = 100
+			}
+			else = {
+				add_adm_power = 200
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_country_modifier = {
+					name = MU_vij_march_exp_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+MU_vij_march_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = VIJ
+		has_country_flag = MU_vij_march_mission_flag
+	} 
+
+	MU_vij_march_army = {
+		icon = mission_assemble_an_army
+		position = 2
+		required_missions = { MU_vij_march_establish_march } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_manpower_building_trigger = yes }
+			NOT = { has_forcelimit_building_trigger = yes }
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+				has_forcelimit_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = MU_vij_march_army_mod
+				duration = -1
+			}
+			add_mil_power = 100
+			event_target:MU_vij_march_overlord_target = {
+				add_mil_power = 100
+			}
+		} 
+	}
+
+	MU_vij_march_maratha = {
+		icon = mission_impaled_soldies
+		position = 3
+		required_missions = { MU_vij_march_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			land_forcelimit = 80
+			if = {
+				limit = {
+					event_target:MU_vij_march_overlord_target = {
+						has_estate = estate_nobles
+					}
+				}
+				event_target:MU_vij_march_overlord_target = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_nobles
+						value = 4
+					}
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					event_target:MU_vij_march_overlord_target = {
+						has_estate = estate_nobles
+					}
+				}
+				custom_tooltip = MU_vij_march_overlord_unlock_maratha_privilege_tt
+				custom_tooltip = empty_line_tt
+				hidden_effect = {
+					event_target:MU_vij_march_overlord_target = {
+						set_country_flag = MU_vij_march_overlord_unlock_maratha_privilege_flag
+					}
+				}
+			}
+			event_target:MU_vij_march_overlord_target = {
+				add_mil_power = 100
+			}
+		} 
+	}
+
+	MU_vij_march_frontier = {
+		icon = mng_nomadic_frontier
+		position = 5
+		required_missions = { MU_vij_march_maratha } 
+		provinces_to_highlight = {
+			owned_by = event_target:MU_vij_march_overlord_target
+			any_neighbor_province = {
+				NOT = { country_or_non_sovereign_subject_holds = event_target:MU_vij_march_overlord_target }
+			}
+			NOT = { has_fort_building_trigger = yes }
+		} 
+
+		trigger = {
+			event_target:MU_vij_march_overlord_target = {
+				num_of_owned_provinces_with = {
+					value = 20
+					custom_trigger_tooltip = {
+						tooltip = MU_neighbor_with_other_country_tt
+						any_neighbor_province = {
+							NOT = { country_or_non_sovereign_subject_holds = event_target:MU_vij_march_overlord_target }
+						}
+					}
+					has_fort_building_trigger = yes
+				}
+				fortification_expert = 3
+			}
+		} 
+
+		effect = {
+			add_idea_group = defensive_ideas
+			event_target:MU_vij_march_overlord_target = {
+				add_country_modifier = {
+					name = MU_vij_march_frontier_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
