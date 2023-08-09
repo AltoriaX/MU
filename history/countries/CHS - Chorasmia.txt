@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = tajik
+add_accepted_culture = al_suryah_arabic
+religion = sunni
+technology_group = muslim
+capital = 377
+government_rank = 1
+historical_rival = DUL
+historical_rival = ATI
+
+1422.6.8 = {
+	monarch = {
+		name = "Jaqmaq"
+		birth_date = 1382.1.1
+		dynasty = "Anushtigin"
+		culture = tajik
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

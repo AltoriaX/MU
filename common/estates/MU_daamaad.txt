@@ -1,0 +1,33 @@
+estate_daamaad = {
+	icon = 14
+
+	# If true, country will get estate
+	trigger = {
+		# tag = GEK
+		always = no
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+	}
+	country_modifier_neutral = {
+	}	
+	country_modifier_angry = {
+	}
+
+	land_ownership_modifier = {
+	}
+
+	province_independence_weight = {}
+
+	# Influence modifiers
+	base_influence = 10
+
+	contributes_to_curia_treasury = yes
+	color = { 63 143 176 }
+
+	privileges = {}
+
+	agendas = {}
+	influence_from_dev_modifier = 1.0
+}

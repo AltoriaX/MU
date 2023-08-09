@@ -1,0 +1,41 @@
+MU_nomadic_tribe_agenda_1_modifier = {
+	global_tax_modifier = -0.1
+	available_province_loot = 0.25
+	loot_amount = 0.25
+}
+
+MU_nomadic_tribe_agenda_2_modifier = {
+	global_regiment_cost = 0.15
+	land_morale = -0.05
+}
+
+MU_nomadic_tribe_agenda_2_1_modifier = {
+	land_maintenance_modifier = 0.05
+	land_morale = 0.05
+}
+
+MU_nomadic_tribe_agenda_2_2_modifier = {
+	land_maintenance_modifier = 0.2
+	land_morale = -0.15
+	discipline = -0.05
+}
+
+MU_nomadic_tribe_agenda_4_modifier = {
+	raze_power_gain = 0.25
+}
+
+MU_nomadic_tribe_agenda_5_1_modifier = {
+	all_power_cost = -0.03
+}
+
+MU_nomadic_tribe_agenda_5_2_modifier = {
+	all_power_cost = 0.1
+	country_admin_power = -1
+	country_diplomatic_power = -1
+	country_military_power = -1
+}
+
+MU_nomadic_tribe_agenda_6_modifier = {
+	vassal_income = 0.25
+	reduced_liberty_desire = -10
+}

@@ -1,0 +1,37 @@
+﻿l_english:
+ MU_gek_can_select_future_road_tt: "=T(uNy˜yrŠk„v§Y³Q®‹§!ÿAQ¸‹`O§M„˜È‰§!b§G	éb§!@[GEK.GetTag]§Y[GEK.GetName]§!„vTíu§YûN¡R§!"
+ MU_gek_rebels_has_appear_tt: "‹NöN0§YýpßpÛVw§!0òTæ‰ÑS"
+ MU_gek_remove_rebel_tt: " ‹NöN0§YýpßpÛVw§!0SNQæ‰ÑS"
+ MU_is_preview_mission_tt: "Ù=fN*N§M„˜È‰ûN¡R§!ÿ°s(WàeÕlŒRb"
+ MU_gek_remove_tribe_control_council_tt: "Nb	g§Y6–BS§!ýïSåN(W®‹‹NO-NÐcúQ§Y®‹z§!\ny(u§YèÏe§!„v§MyrŠk®‹z§!"
+ unlock_MU_gek_mongolia_centralization_reform_tt: "ã‰•0§Y™„äSV-N.YÆ–Cg§!0?eœ^9ei—"
+ MU_gek_improve_six_burma_province_tt: "–:g§Y6§!*N^SŽN§Y[Root.GetName]§!„v8u0W:SwýN·ƒ—V\n§G1§!¤0§G2§!£icon_production_in_text£0§G1§!£icon_manpower_in_text£"
+ MU_gek_belong_coromandel_node_tt: "§YwýN§!^SŽN§YÑyWüf·V§!8f‚‚¹p"
+ MU_gek_bussiness_tax_extra_yes_tt: "£yes£‚YœgŒRbûN¡Röe8f6eeQ`SÔk¾0R§Y30%§!ÿSå‹îOck9e:N§G8lEN§!"
+ MU_gek_bussiness_tax_extra_no_tt: "£no£‚YœgŒRbûN¡Röe8f6eeQ`SÔk¾0R§Y30%§!ÿSå‹îOck9e:N§G8lEN§!"
+ MU_gek_jian_and_muslim_jina_yes_tt: "£yes£§M‚YœgŒRb§!0§Yw±Ye’V§!0§M„vøvsQagöNÿSµNuåNNHeœg§!ÿ"
+ MU_gek_jian_and_muslim_jina_no_tt: "£no£§M‚YœgŒRb§!0§Yw±Ye’V§!0§M„vøvsQagöNÿSµNuåNNHeœg§!ÿ"
+ MU_gek_jian_and_muslim_jina_effect_tt: "w±Ye’V6–BSyrCg0§YŒcµc'^?eVr§!0SNQüRô§RNb	g¹ppe±‚9§!é`Z"
+ MU_gek_jian_and_muslim_muslim_yes_tt: "£yes£§M‚YœgŒRb§!0§YLNt›s§!0§M„vøvsQagöNÿSµNuåNNHeœg§!ÿ"
+ MU_gek_jian_and_muslim_muslim_no_tt: "£no£§M‚YœgŒRb§!0§YLNt›s§!0§M„vøvsQagöNÿSµNuåNNHeœg§!ÿ"
+ MU_gek_jian_and_muslim_muslim_effect_tt: "ã‰•LNt›s6–BSyrCg0§YŸ±RYeëXÂSNFUN§!0"
+ MU_gek_cloth_produce_1_tt: "Nb	gán³agöN„v§YwýN§!ÿ"production
+ MU_gek_cloth_produce_2_tt: "–:g§Y5§!*Nán³agöNNåb	g§Y10§!£icon_production_in_text£„v§YwýN§!ÿ"
+ MU_gek_supervise_textile_tt: "Ñv¡rºuÇuN"
+ MU_upgrade_production_building_tt: "§YwýN§!GSµuuµNú^Qr"
+ MU_gek_encourage_produce_effect_tt: "ÐcGS§YwýN§!ÑSUS¦^öe	g§Y20%§!‚i‡s˜Y·ƒ—V§G1§!£icon_production_in_text£"
+ MU_gek_india_industry_effect_tt: "=T(u0§Y9eú^ÍyiíV§!0³Q®‹ÿAQ¸‹`OSuµN§YÉh±‚§!„vwýN9e:NuµN§Y^™e§!"
+ MU_no_province_can_use_tt: "SVMR¡l	g§YwýN§!án³agöN"
+ MU_gek_upgrade_iqta_tt: "§G:VS§!§YOKQTXz6e§!ýw›R"
+ MU_gek_unlock_tax_market_monument_tt: "ã‰•O'YåTz0§Ygy†^:W§!0ÿå‹O'YåTzMOŽN§Y[522.GetName]§!"
+ MU_gek_capital_upgrade_center_of_trade_yes_tt: "£yes£§M‚Yœg§!§Y[Root.Capital.GetName]§!§M¡l	g8f-NÃVÿbIrµuNOŽN§!§Y3§!§MÿSµNuåNNHeœg§!ÿ"
+ MU_gek_capital_upgrade_center_of_trade_no_tt: "£no£§M‚Yœg§!§Y[Root.Capital.GetName]§!§M¡l	g8f-NÃVÿbIrµuNOŽN§!§Y3§!§MÿSµNuåNNHeœg§!ÿ"
+ MU_gek_capital_add_modifier_yes_tt: "£yes£§M‚Yœg§!§Y[Root.Capital.GetName]§!§M	g§!§Y3§!§Mµu8f-NÃVÿSµNuåNNHeœg§!ÿ"
+ MU_gek_capital_add_modifier_no_tt: "£no£§M‚Yœg§!§Y[Root.Capital.GetName]§!§M	g§!§Y3§!§Mµu8f-NÃVÿSµNuåNNHeœg§!ÿ"
+ MU_gek_random_5_province_change_culture_tt: "–:g§Y5§!*N§YwýN§!ÿ"
+ MU_gek_raze_add_missionary_strength_tt: "§Yq cwýN§!S˜YÑSuåNNHeœgÿ"
+ MU_gek_inquisitor_add_religious_unify_tt: "Ïkµu§Y¡R¯‹˜R§!˜YÐc›Oÿ\n  —RYeßuNÿ§G+5%§!"
+ MU_gek_converted_50_province_tt: "(W§Y50§!*N§YwýN§!ŒRb§Y.OYe§!ÿ§Y[Root.GetNumConvertedProvinces]§!/§Y50§!	ÿ"
+ MU_gek_unlock_order_tt: "§G=T(u§!§YQY¯eÐcYeâV§!0§Y³u<hÀNísêYeâV§!0§Y?–ÈTs|YeâV§!"
+ MU_gek_hindusthani_culture_no_debuff_tt: "§YpS¦^¯efW§!‡eSÄuSNQüRô§Rb—qVÍT§!"
+ MU_gek_all_hindusthani_province_change_religion_tt: "»lNNb	g§YpS¦^¯efW§!‡eSÄu„vwýNáOðN§Y[Root.Religion.GetName]§!"

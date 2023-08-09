@@ -1,0 +1,76 @@
+######################################################################
+# Disgruntled nobles.
+######################################################################
+gurkayan_rebels = {
+
+	color = { 9 8 9 }
+
+	area = nation 					# Stays within the nation
+	government = monarchy			# Likes monarchy
+	defection = none				# Does not defect
+	independence = none				# Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_owner	
+	will_relocate = yes	
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0
+	infantry = 0.9
+	cavalry = 0.1
+	
+	morale = 1.0
+	
+	# Possible handle actions
+	handle_action_stability = yes
+	
+	# The rebel type with the highest modifier for this province gets picked
+	# Will not appear everytime
+	spawn_chance = {
+		factor = 0
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 1000
+			province_id = 522
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		always = yes
+	}
+	siege_won_effect = {
+		add_local_autonomy = 10
+		change_religion = hinduism
+		add_province_modifier = {
+			name = religious_zeal_at_conv
+			duration = 3650
+		}
+	}
+
+	
+	# Country scope
+	can_negotiate_trigger = {
+		always = no
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "MU_gurkayan_rebels_demands_tt"
+	
+	# Country Scope	
+	demands_enforced_effect = {
+		change_religion = hinduism
+	}
+}

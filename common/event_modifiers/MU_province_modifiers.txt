@@ -1,0 +1,40 @@
+MU_gek_mernal_gold_mod = {
+	local_gold_depletion_chance_modifier = -1.0
+	trade_goods_size = 3
+}
+
+MU_gek_bussiness_capital_mod = {
+	trade_value = 5
+	trade_value_modifier = 0.25
+}
+
+MU_iqta_tax_farmer_1_mod = {
+	trade_value = 2
+	province_trade_power_modifier = 0.33
+	local_build_cost = -0.15
+	local_build_time = -0.15
+	local_development_cost = -0.1
+}
+
+MU_iqta_tax_farmer_2_mod = {
+	local_build_cost = -0.15
+	local_build_time = -0.15
+	local_development_cost = -0.1
+}
+
+MU_iqta_change_culture_mod = {
+	local_culture_conversion_cost = -0.5
+	local_culture_conversion_time = -0.5
+}
+
+MU_raze_add_missionary_strength_mod = {
+	local_missionary_strength = 0.01
+}
+
+MU_gek_hindusthani_culture_identity_mod = {
+	local_unrest = -2
+	local_tax_modifier = 0.33
+	local_missionary_strength = 0.02
+	local_manpower_modifier = 0.33
+	local_sailors_modifier = 0.2
+}

@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = al_iraqiya_arabic
+religion = sunni
+technology_group = muslim
+capital = 410 
+1443.1.1 = {
+  monarch = {
+    name = "Mutamid" 
+    culture = al_iraqiya_arabic
+    dynasty = "Abassids"  
+    adm = 4
+    dip = 4
+    mil = 2
+  }
+}

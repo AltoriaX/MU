@@ -1,0 +1,23 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = oirats
+add_accepted_culture = tibetan
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+technology_group = nomad_group
+capital = 706	# tsaidam
+
+
+1387.1.1 = {
+	monarch = {
+		name = "Gushri"
+		dynasty = "Khoshut"
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}
+
+
+
+ 

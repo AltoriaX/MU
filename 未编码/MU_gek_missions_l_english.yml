@@ -1,0 +1,209 @@
+﻿l_english:
+ MU_gek_appease_the_lord_title:0 "安抚领地"
+ MU_gek_appease_the_lord_desc:0 ""
+
+ MU_gek_end_division_title:0 "结束分裂"
+ MU_gek_end_division_desc:0 ""
+
+ MU_gek_strengthen_governance_title:0 "加强统治"
+ MU_gek_strengthen_governance_desc:0 ""
+
+ MU_gek_mongolian_centralisation_title:0 "蒙古式中央集权"
+ MU_gek_mongolian_centralisation_desc:0 ""
+
+ MU_gek_prepare_expedition_title:0 "准备出征"
+ MU_gek_prepare_expedition_desc:0 ""
+
+ MU_gek_conquer_deccan_title:0 "进军德干"
+ MU_gek_conquer_deccan_desc:0 ""
+
+ MU_gek_destory_vij_title:0 "毗奢耶那伽罗的毁灭"
+ MU_gek_destory_vij_desc:0 ""
+
+ MU_gek_costal_city_title:0 "扫荡沿海城邦"
+ MU_gek_costal_city_desc:0 ""
+
+ MU_gek_develop_delhi_title:0 "发展[Root.Capital.GetName]"
+ MU_gek_develop_delhi_desc:0 ""
+
+ MU_gek_encourage_produce_title:0 "鼓励商品生产"
+ MU_gek_encourage_produce_desc:0 ""
+
+ MU_gek_supervise_textile_title:0 "监察纺织业"
+ MU_gek_supervise_textile_desc:0 ""
+
+ MU_gek_rice_to_mulgerry_title:0 "丝绵事业"
+ MU_gek_rice_to_mulgerry_desc:0 ""
+
+ MU_gek_cross_ganges_title:0 "越过恒河"
+ MU_gek_cross_ganges_desc:0 ""
+
+ MU_gek_tea_and_horse_road_title:0 "清理茶马古道"
+ MU_gek_tea_and_horse_road_desc:0 ""
+
+ MU_gek_dust_landing_title:0 "尘埃落地"
+ MU_gek_dust_landing_desc:0 ""
+
+ MU_gek_restore_finance_title:0 "恢复财政"
+ MU_gek_restore_finance_desc:0 ""
+
+ MU_gek_control_ganges_trade_title:0 "掌控恒河贸易"
+ MU_gek_control_ganges_trade_desc:0 ""
+
+ MU_gek_mernal_gold_title:0 "扩大[2058.GetName]金矿"
+ MU_gek_mernal_gold_desc:0 ""
+
+ MU_gek_jina_and_muslim_trader_title:0 "耆那教徒与\n穆斯林商人"
+ MU_gek_jina_and_muslim_trader_desc:0 ""
+
+ MU_gek_iqta_title:0 "伊克塔制度"
+ MU_gek_iqta_desc:0 ""
+
+ MU_gek_go_to_prosperous_title:0 "走向繁荣"
+ MU_gek_go_to_prosperous_desc:0 ""
+
+ MU_gek_empire_future_title:0 "帝国的未来"
+ MU_gek_empire_future_desc:0 ""
+
+ MU_gek_middle_asia_culture_title:0 "引入中亚习俗"
+ MU_gek_middle_asia_culture_desc:0 ""
+
+ MU_gek_add_bussiness_tax_title:0 "增加商业税"
+ MU_gek_add_bussiness_tax_desc:0 ""
+
+ MU_gek_india_identify_title:0 "培植印度斯坦认同"
+ MU_gek_india_identify_desc:0 ""
+
+ MU_gek_use_tradition_title:0 "利用传统"
+ MU_gek_use_tradition_desc:0 ""
+
+ MU_gek_expand_inclusive_tax_system_title:0 "拓展包税制"
+ MU_gek_expand_inclusive_tax_system_desc:0 ""
+
+ MU_gek_inclusive_tax_market_title:0 "包税权拍卖市场"
+ MU_gek_inclusive_tax_market_desc:0 ""
+
+ MU_gek_true_faith_country_title:0 "正信者之国"
+ MU_gek_true_faith_country_desc:0 ""
+
+ MU_gek_timur_title:0 "推崇帖木儿"
+ MU_gek_timur_desc:0 ""
+
+ MU_gek_true_faith_river_title:0 "正信之河"
+ MU_gek_true_faith_river_desc:0 ""
+
+ MU_gek_eradicate_idolatry_title:0 "根除偶像崇拜者"
+ MU_gek_eradicate_idolatry_desc:0 ""
+
+ MU_gek_shadow_of_lord_title:0 "主在人间之影"
+ MU_gek_shadow_of_lord_desc:0 ""
+
+ MU_gek_monopoly_spice_title:0 "垄断香料贸易"
+ MU_gek_monopoly_spice_desc:0 ""
+
+ MU_gek_commander_muslim_community_title:0 "统领南洋穆斯林社区"
+ MU_gek_commander_muslim_community_desc:0 ""
+
+ MU_gek_eradicate_shiva_title:0 "铲除湿婆影响"
+ MU_gek_eradicate_shiva_desc:0 ""
+
+ MU_gek_australia_title:0 "南方大陆？"
+ MU_gek_australia_desc:0 ""
+
+ MU_gek_expand_ship_title:0 "扩张舰队"
+ MU_gek_expand_ship_desc:0 ""
+
+ MU_gek_conquer_ceylon_title:0 "清理锡兰岛"
+ MU_gek_conquer_ceylon_desc:0 ""
+
+ MU_gek_monopoly_west_india_ocean_title:0 "垄断西印度洋贸易"
+ MU_gek_monopoly_west_india_ocean_desc:0 ""
+
+ MU_gek_conquer_malacca_title:0 "统治马六甲"
+ MU_gek_conquer_malacca_desc:0 ""
+
+ MU_gek_eliminate_pirate_title:0 "消灭海盗"
+ MU_gek_eliminate_pirate_desc:0 ""
+
+ MU_gek_relationship_with_semu_title:0 "与色目的特殊关系"
+ MU_gek_relationship_with_semu_desc:0 ""
+
+ MU_gek_south_sea_trade_title:0 "南海贸易份额"
+ MU_gek_south_sea_trade_desc:0 ""
+
+ MU_gek_eliminate_zoroastrian_title:0 "消灭祆教徒"
+ MU_gek_eliminate_zoroastrian_desc:0 ""
+
+ MU_gek_call_of_grassland_title:0 "草原的呼唤"
+ MU_gek_call_of_grassland_desc:0 ""
+
+ MU_gek_explore_maldives_title:0 "探索马尔代夫"
+ MU_gek_explore_maldives_desc:0 ""
+
+ MU_gek_arab_trade_title:0 "和阿拉伯人做生意"
+ MU_gek_arab_trade_desc:0 ""
+
+ MU_gek_hajj_interest_title:0 "垄断朝觐利益"
+ MU_gek_hajj_interest_desc:0 ""
+
+ MU_gek_claim_holy_land_title:0 "宣称圣地守护者"
+ MU_gek_claim_holy_land_desc:0 ""
+
+ MU_gek_amass_wealth_title:0 "聚敛财富"
+ MU_gek_amass_wealth_desc:0 ""
+
+ MU_gek_reform_finance_title:0 "财政改革"
+ MU_gek_reform_finance_desc:0 ""
+
+ MU_gek_follow_ahmad_title:0 "追随阿合马的脚步"
+ MU_gek_follow_ahmad_desc:0 ""
+
+ MU_gek_conquer_wuchang_title:0 "东西对进，会攻武昌"
+ MU_gek_conquer_wuchang_desc:0 ""
+
+ MU_gek_conquer_burma_title:0 "再征缅甸"
+ MU_gek_conquer_burma_desc:0 ""
+
+ MU_gek_conquer_bangkok_title:0 "夺取曼谷"
+ MU_gek_conquer_bangkok_desc:0 ""
+
+ MU_gek_destory_bangkok_title:0 "摧毁曼谷佛教中心"
+ MU_gek_destory_bangkok_desc:0 ""
+
+ MU_gek_conquer_guangzhou_title:0 "讨伐广南"
+ MU_gek_conquer_guangzhou_desc:0 ""
+
+ MU_gek_up_through_river_title:0 "溯流而上"
+ MU_gek_up_through_river_desc:0 ""
+
+ MU_gek_conquer_dali_title:0 "越过群山，征服大理"
+ MU_gek_conquer_dali_desc:0 ""
+
+ MU_gek_conquer_shu_title:0 "北伐入蜀"
+ MU_gek_conquer_shu_desc:0 ""
+
+ MU_gek_conquer_xiang_gui_title:0 "扫荡湘桂"
+ MU_gek_conquer_xiang_gui_desc:0 ""
+
+ MU_gek_conquer_shannan_title:0 "扫清山南"
+ MU_gek_conquer_shannan_desc:0 ""
+
+ MU_gek_conquer_lhasa_valley_title:0 "荡平拉萨河谷"
+ MU_gek_conquer_lhasa_valley_desc:0 ""
+
+ MU_gek_destory_lhasa_title:0 "摧毁拉萨佛教中心"
+ MU_gek_destory_lhasa_desc:0 ""
+
+ MU_gek_conquer_tibet_title:0 "扩张到青康"
+ MU_gek_conquer_tibet_desc:0 ""
+
+ MU_gek_dandang_title:0 "探访旦当"
+ MU_gek_dandang_desc:0 ""
+
+ MU_gek_dandang_mystery_title:0 "旦当之谜"
+ MU_gek_dandang_mystery_desc:0 ""
+
+ MU_gek_miracle_title:0 "§P致幻剂里的神迹§!"
+ MU_gek_miracle_desc:0 ""
+
+

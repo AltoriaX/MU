@@ -1,0 +1,153 @@
+mongolian_shackles = {
+	icon = "mongolia_1"
+	allow_normal_conversion = yes
+	raze_province = yes	
+	potential = {
+		OR = {
+			has_reform = mongolian_shackles
+			have_had_reform = mongolian_shackles
+		}
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		reinforce_cost_modifier = -0.33
+		harsh_treatment_cost = -0.5
+		global_unrest = 6
+		reduced_liberty_desire = -20
+		religious_unity = -0.2
+	}
+
+	custom_attributes = {
+		enables_estate_nomadic_tribes = yes
+		seizing_land_loyalty = yes
+		mu_mechanic_can_give_agendas_without_interaction = yes
+	}
+
+	# conditional = {
+		# allow = { has_dlc = "Cradle of Civilization" }
+		# government_abilities = {
+			# iqta_mechanic
+		# }
+	# }
+	ai = {
+		factor = 0
+	}
+}
+
+gensokyo = {
+	icon = "gensokyo"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = gensokyo
+			have_had_reform = gensokyo
+		}
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	has_parliament = yes
+	fixed_rank = 3
+	modifiers = {
+		parliament_backing_chance = 1.0
+		religious_unity = 1.0
+		core_creation = -0.2
+		all_estate_loyalty_equilibrium = 0.2
+		stability_cost_modifier = 1.0
+		diplomatic_reputation = -3
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		temples_modifier = yes
+		parliament_seat_bonus = yes
+		mu_mechanic_can_give_agendas_without_interaction = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mu_gensokyo_mechanic
+		}
+	}
+	ai = {
+		factor = 0
+	}
+}
+
+MU_gek_mongolia_centralization_reform = {
+	icon = "mongolia_3"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_country_flag = unlocked_MU_gek_mongolia_centralization_reform
+			has_reform = MU_gek_mongolia_centralization_reform
+			have_had_reform = MU_gek_mongolia_centralization_reform
+		}
+	}
+	trigger = { }
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = unlocked_MU_gek_mongolia_centralization_reform
+				}
+			}
+			clr_country_flag = unlocked_MU_gek_mongolia_centralization_reform
+		}
+	}
+	modifiers = {
+		land_morale = 0.1
+		army_tradition = 0.25
+		land_maintenance_modifier = 0.1
+		nomadic_tribes_influence_modifier = -0.1
+		no_stability_loss_on_monarch_death = yes
+	}
+	government_abilities = {
+		MU_tribe_rule_mechanic
+		# parliament_vs_monarchy_mechanic
+	}
+	# custom_attributes = {
+		# diet_increases_not_influence = yes
+		# mu_mechanic_council_reduce_tribe_land = yes
+	# }
+	ai = {
+		factor = 1
+	}
+}
+
+MU_gek_iqta_reform = {
+	icon = "muslim"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_country_flag = unlocked_MU_gek_iqta_reform
+			has_reform = MU_gek_iqta_reform
+			have_had_reform = MU_gek_iqta_reform
+		}
+	}
+	trigger = {
+		religion_group = muslim
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = unlocked_MU_gek_iqta_reform
+				}
+			}
+			clr_country_flag = unlocked_MU_gek_iqta_reform
+		}
+	}
+	modifiers= {
+		liberty_desire_from_subject_development = -0.1
+		vassal_income = 0.33
+		state_maintenance_modifier = -0.33
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+	ai = {
+		factor = 1000
+	}
+}

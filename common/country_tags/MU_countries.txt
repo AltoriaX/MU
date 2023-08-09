@@ -1,0 +1,27 @@
+#India
+GEK = "countries/Gurkayan.txt"
+#Mongol
+OGE = "countries/Ogedeides.txt"
+#Levant
+KOJ = "countries/Jerusalem.txt"
+ATI = "countries/Antioch.txt"
+CHS = "countries/Chorasmia.txt"
+#alab 
+ABS = "countries/Abassids.txt"
+FAT = "countries/Fatimid.txt"
+#Greek 
+COS = "countries/Constantinople.txt"
+THR = "countries/Thrace.txt"
+NIC = "countries/Nicea.txt"
+#Turkey
+CLC = "countries/Cilicia.txt"
+TMT = "countries/TamerlaneTash.txt"
+#Prsia 
+QQT = "countries/Khitai.txt"
+#tatars
+GOL = "countries/GoldenHorde.txt"
+#MiddleAisa
+KUC = "countries/Kuci.txt"
+KRR = "countries/Kroraina.txt"
+#Spanish
+ADU = "countries/Andalusia.txt"

@@ -1,0 +1,29 @@
+﻿l_english:
+ mechanic_mu_mechanic_can_give_agendas_without_interaction_yes: "6–BSïSåN–öeÐcúQ®‹z"
+ ability_mu_gensokyo_mechanic: "§P0PNíV0„vNïS`®‹§!"
+ gensokyo_mystery: "§P0PNíV0„vNïS`®‹§!"
+ 
+ 
+ MU_gensokyo_mechanic_max_tt: "§P‰^ó`N°sžR„vƒXLun!jÊ|§!"
+ mechanic_mu_mechanic_council_reduce_tribe_land_yes: "ìSV®‹‹NOSÏQS§Y5%§!èÏeµc6R„vW0W"
+ ability_MU_tribe_rule_mechanic: "§YèÏeßu»l§!"
+ MU_tribe_rule_power: "§YèÏeßu»l›R§!"
+ MU_tribe_rule_power_desc: "\nåNNàV.tSÐcØš§YèÏeßu»l›R§!:\n-°eßu»lwNðSÿ§Y+20§!\n-q cwýNÿ§Y+1§!\n\nåNNàV.tSM–NO§YèÏeßu»l›R§!ÿ\n-ìSV®‹‹NOÿ§Y-5§!\n\n(W¾0R §Y100§! §YèÏeßu»l›R§!ÿ·ƒ—V‚YNHeœgÿ\n  ºN›Rb`Y¦^ÿ§G+25.0%§!\n  ýV¶Rz6eîOckÿ§R-25.0%§!\n  Ïkt^F–›Q.Oßuÿ§G+1.00§!\n  èÏeqVÍT›Rÿ§Y+20.0%§!\n\n(W¾0R §Y-100§! §YèÏeßu»l›R§!ÿ·ƒ—V‚YNHeœgÿ\n  ºN›Rb`Y¦^ÿ§R-25.0%§!\n  hQýVÛSqN¦^ÿ§G-3.00§!\n  ÑSUSb,gÿ§G-10.0%§!\n  èÏeqVÍT›Rÿ§Y-20.0%§!\n  Nb	g6–BSqVÍT›Rÿ§Y+10.0%§!\n"
+ MU_not_in_tribe_rule_event_tt: "*g(W§YèÏeßu»l§!:g6R„vøvsQ§Y‹NöN§!-N"
+ MU_tribe_rule_tribe_reble_available_tt: "‚Yœg§YèÏe§!àVÚ‹¦^M–óNOŽN§R30§!ÿ§YèÏe§!SÑS¨R§RÛSqN§!"
+ MU_tribe_rule_church_interface_tt: "9hnc§YLNt›s§!„v§YqVÍT›R§!æ‰ÑSNT„vHeœg"
+ MU_tribe_rule_nobles_interface_tt: "9hnc§YÃWs|S§!„v§YqVÍT›R§!æ‰ÑSNT„vHeœg"
+ MU_tribe_rule_jains_interface_tt: "9hnc§Yw±Ye’V§!„v§YqVÍT›R§!æ‰ÑSNT„vHeœg"
+ MU_tribe_rule_interface_effect_1_tt: "SVMR§YqVÍT›R§!ÿ§Y0%§!-§Y30%§!	ÿSæ‰ÑSåNNHeœgÿ"
+ MU_tribe_rule_interface_effect_2_tt: "SVMR§YqVÍT›R§!ÿ§Y30%§!-§Y60%§!	ÿSæ‰ÑSåNNHeœgÿ"
+ MU_tribe_rule_interface_effect_3_tt: "SVMR§YqVÍT›R§!ÿ§Y60%§!-§Y100%§!	ÿSæ‰ÑSåNNHeœgÿ"
+ MU_tribe_rule_interface_church: "ûRBlYeëX=ec"
+ MU_tribe_rule_interface_nobles: "ÐcÔb5Ïe6–BS"
+ MU_tribe_rule_interface_jains: "ib'Yw±Ye’V"
+ MU_tribe_rule_interface_church_desc: ""
+ MU_tribe_rule_interface_nobles_desc: ""
+ MU_tribe_rule_interface_jains_desc: ""
+ MU_all_owned_province_has_center_of_trade_tt: "Nb	gåb	g§Y8f-NÃV§!„v§YwýN§!·ƒ—VåNNHeœgÿ"
+ MU_all_owned_province_neighbor_center_of_trade_tt: "Nb	gN§Y8f-NÃV§!øv»„v§YwýN§!·ƒ—VåNNHeœgÿ"
+ MU_all_owned_province_neighbor_primary_culture_tt: "Nb	gN§YINAm‡eSwýN§!øv»„v§YwýN§!·ƒ—VåNNHeœgÿ"
+ MU_all_subject_remove_opinion_annex_vassal_tt: "Nb	g§Y^SýV§!ÿ\nûyd–0§YTv^D–¸^§!0„vsQû|îOck"

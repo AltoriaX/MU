@@ -1,0 +1,95 @@
+MU_estate_church_muslim_trader = {
+	icon = privilege_monopoly
+	loyalty = 0.1
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+		has_country_flag = MU_gek_jian_and_muslim_muslim_effect_flag
+	}
+	can_select = {
+		religion_group = muslim
+	}
+	benefits = {
+		merchants = 1
+	}
+	on_granted = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = MU_estate_church_muslim_trader
+		}
+	}
+	on_revoked = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = MU_estate_church_muslim_trader
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+			}
+		}
+		modifier = {
+			trade_steering = -0.5
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 30
+			}
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+		}
+		modifier = {
+			trade_steering = 0.33
+			placed_merchant_power_modifier = 0.33
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 60
+			}
+		}
+		modifier = {
+			trade_steering = 0.5
+			placed_merchant_power_modifier = 0.5
+		}
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}

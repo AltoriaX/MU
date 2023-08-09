@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_order_MU_chisti"
+		texturefile = "gfx/interface/MU_holy_orders/MU_chisti.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_MU_nageshbandi"
+		texturefile = "gfx/interface/MU_holy_orders/MU_nageshbandi.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_MU_ahami"
+		texturefile = "gfx/interface/MU_holy_orders/MU_ahami.dds"
+		noOfFrames = 4
+	}
+}

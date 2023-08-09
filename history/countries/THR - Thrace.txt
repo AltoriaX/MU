@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = latin_greek
+add_accepted_culture = greek
+religion = catholic
+capital = 148
+
+1438.1.1 = {
+	monarch = {
+		name = "Maria II"
+		dynasty = "Montferrat"
+        birth_date = 1421.9.1
+		dip = 1
+		adm = 3
+		mil = 1
+		female = yes
+	}
+}
+
+1438.1.1 = {
+	heir = {
+		name = "Centurione"
+		monarch_name = "Centurione II"
+		dynasty = "Montferrat"
+		birth_date = 1400.12.1
+		claim = 95
+		dip = 1
+		adm = 0
+		mil = 0
+	}
+}

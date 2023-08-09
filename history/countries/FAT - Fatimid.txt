@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = feudal_theocracy
+primary_culture = al_misr_arabic
+add_accepted_culture = al_suryah_arabic
+add_accepted_culture = bedouin_arabic
+religion = shiite
+technology_group = muslim
+historical_rival = ABS
+historical_rival = EGY
+government_rank = 1
+capital = 380
+
+1404.3.14 = {
+	monarch = {
+		name = "Muhammad 'Ali"
+		dynasty = "Fatimid"
+		adm = 3
+		dip = 4
+		mil = 3
+		leader = { name = "Mehmet Ali"		type = general	fire = 1	shock = 4	manuever = 5	siege = 0 }
+	}
+}

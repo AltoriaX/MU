@@ -1,0 +1,75 @@
+country_decisions = {
+	MU_gek_select_future_road_decision = {
+		title = MU_gek_select_future_road_decision_title
+		desc = MU_gek_select_future_road_decision_desc
+		major = yes
+		potential = {
+			# tag = GEK
+			mission_completed = MU_gek_empire_future
+			has_country_flag = MU_gek_can_select_future_road_flag
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = MU_without_select_future_road_event_tt
+				NOT = { has_country_flag = MU_with_select_future_road_event_flag }
+			}
+		}
+		effect = {
+			country_event = {
+				id = MU_gek_events.8
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_decisions = {
+	MU_gek_change_plantations_decision = {
+		title = MU_gek_change_plantations_decision_title
+		desc = MU_gek_change_plantations_decision_desc
+		potential = {
+			has_country_flag = MU_gek_india_industry_effect_flag
+		}
+		allow = {
+			any_owned_province = {
+				superregion = india_superregion
+				base_production = 10
+				trade_goods = cotton
+				has_building = plantations
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_province = {
+							superregion = india_superregion
+							base_production = 10
+							trade_goods = cotton
+							has_building = plantations
+						}
+					}
+				}
+				custom_tooltip = MU_no_province_can_use_tt
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						superregion = india_superregion
+						base_production = 10
+						trade_goods = cotton
+						has_building = plantations
+					}
+					change_trade_goods = cloth
+					remove_building = plantations
+					add_building = textile
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,32 @@
+mu_gensokyo_mechanic = {
+	available = {
+		has_dlc = "Domination"
+		NOT = { has_country_flag = MU_gek_gensokyo_mystery_max_flag }
+	}
+
+	powers = {
+		gensokyo_mystery = {
+			gui = end_time_gov_mech
+			max = 100	#Monarchy direction
+			base_monthly_growth = 1
+			scaled_modifier = {
+				modifier = {
+					morale_damage = 0.5
+					recover_army_morale_speed = 1.0
+					idea_cost = -1.0
+					defensiveness = -1.0
+					global_trade_goods_size_modifier = -0.5
+					technology_cost = 1.0
+				}
+			}
+			on_max_reached = {
+				custom_tooltip = MU_gensokyo_mechanic_max_tt
+				hidden_effect = {
+					country_event = {
+						id = MU_gek_events.7
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,576 @@
+MU_nomadic_tribe_agenda_1 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20 									#初始权重不能小于1
+		modifier = {
+			factor = 2
+			years_of_income = 2.5
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+ #	provinces_to_highlight = { triggers }		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_1_modifier
+			duration = 3650
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			years_of_income = 2.5
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_years_of_income = -2.5
+		remove_country_modifier = MU_nomadic_tribe_agenda_1_modifier
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		add_years_of_income = -5
+		custom_tooltip = MU_every_owned_province_tt
+		tooltip = {
+			add_devastation = 20
+		}
+		custom_tooltip = empty_line_tt
+		hidden_effect = {
+			every_owned_province = {
+				add_devastation = 20
+			}
+		}
+		add_estate_loyalty_modifier = {
+			estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -10
+			duration = 7300
+		}
+		remove_country_modifier = MU_nomadic_tribe_agenda_1_modifier
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { always = no } 						#议程失败的条件
+	on_invalid = {
+		remove_country_modifier = MU_nomadic_tribe_agenda_1_modifier
+	} 					#当国家不再拥有该阶层时执行的效果，用于清除flag和修正
+ #	invalid_trigger = { triggers } 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，也会满足该条件
+ #	modifier = { name = MU_nomadic_tribe_agenda_1_modifier } 					#议程激活时的修正
+}
+
+MU_nomadic_tribe_agenda_2 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20 									#初始权重不能小于1
+		modifier = {
+			factor = 2
+			manpower_percentage = 0.5
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_2_1_modifier
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_2_2_modifier
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+ #	provinces_to_highlight = { triggers }		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_2_modifier
+			duration = 3650
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { army_size = 100 }
+			}
+			army_size_percentage = 0.9
+		}
+		else = {
+			army_size_percentage = 0.8
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_yearly_manpower = 1
+		remove_country_modifier = MU_nomadic_tribe_agenda_2_modifier
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_2_1_modifier
+			duration = 3650
+		}
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		custom_tooltip = MU_lose_all_manpower_tt
+		hidden_effect = {
+			add_yearly_manpower = -100
+		}
+		remove_country_modifier = MU_nomadic_tribe_agenda_2_modifier
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_2_2_modifier
+			duration = 3650
+		}
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { always = no } 						#议程失败的条件
+	on_invalid = {
+		remove_country_modifier = MU_nomadic_tribe_agenda_2_modifier
+	} 					#议程结束但不计入失败时执行的效果，一般用于清除flag和修正
+ #	invalid_trigger = { triggers } 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，自动满足该条件
+ #	modifier = { modifier } 					#议程激活时的修正（测试了一下没效果，不知道怎么用）
+}
+
+MU_nomadic_tribe_agenda_3 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20									#初始权重不能小于1
+		modifier = {
+			factor = 2
+			NOT = {
+				num_of_estate_privileges = {
+					estate = estate_nomadic_tribes
+					value = 4
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			has_estate_influence_modifier = {
+				estate = estate_nomadic_tribes
+				modifier = MU_AGENDA_INFLUENCE_10_TT
+			}
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+ #	provinces_to_highlight = { triggers }		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			num_of_estate_privileges = {
+				estate = estate_nomadic_tribes
+				value = 5
+			}
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nomadic_tribes
+			desc = MU_AGENDA_INFLUENCE_10_TT
+			influence = 10
+			duration = 3650
+		}
+		add_corruption = 2
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		change_estate_land_share = {
+			estate = estate_nomadic_tribes
+			share = 25
+		}
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = -50
+		}
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { always = no } 						#议程失败的条件
+ #	on_invalid = { effects } 					#议程结束但不计入失败时执行的效果，一般用于清除flag和修正
+ #	invalid_trigger = { triggers } 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，自动满足该条件
+ #	modifier = { modifier } 					#议程激活时的修正（测试了一下没效果，不知道怎么用）
+}
+
+MU_nomadic_tribe_agenda_4 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20									#初始权重不能小于1
+		modifier = {
+			factor = 2
+			NOT = {
+				overextension_percentage = 0.01
+			}
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_4_modifier
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+	provinces_to_highlight = {
+		owned_by = ROOT
+		NOT = { is_core = ROOT }
+		NOT = { is_territorial_core = ROOT }
+		NOT = { has_province_modifier = MU_province_razed }
+	}		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+		hidden_effect = {
+			set_variable = {
+				which = muAgendaRazeNumber
+				value = 0
+			}
+			set_country_flag = MU_agenda_raze_province_start_flag
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			check_variable = {
+				which = muAgendaRazeNumber
+				value = 10
+			}
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 20
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_4_modifier
+			duration = 3650
+		}
+		clr_country_flag = MU_agenda_raze_province_start_flag
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		custom_tooltip = MU_agenda_kill_ruler_and_add_negative_personality_tt
+		hidden_effect = {
+			ROOT = {
+				kill_ruler = yes
+				random_list = {
+					1 = { add_ruler_personality = babbling_buffoon_personality }
+					1 = { add_ruler_personality = embezzler_personality }
+					1 = { add_ruler_personality = infertile_personality }
+					1 = { add_ruler_personality = drunkard_personality }
+					1 = { add_ruler_personality = sinner_personality }
+					1 = { add_ruler_personality = greedy_personality }
+					1 = { add_ruler_personality = cruel_personality }
+					1 = { add_ruler_personality = naive_personality }
+					1 = { add_ruler_personality = craven_personality }
+					1 = { add_ruler_personality = loose_lips_personality }
+					1 = { add_ruler_personality = obsessive_perfectionist_personality }
+					1 = { add_ruler_personality = malevolent_personality }
+				}
+			}
+		}
+		clr_country_flag = MU_agenda_raze_province_start_flag
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { always = no } 						#议程失败的条件
+	on_invalid = {
+		clr_country_flag = MU_agenda_raze_province_start_flag
+	} 					#议程结束但不计入失败时执行的效果，一般用于清除flag和修正
+ 	invalid_trigger = {
+		NOT = {
+			has_reform = mongolian_shackles
+		}
+	} 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，自动满足该条件
+ #	modifier = { modifier } 					#议程激活时的修正（测试了一下没效果，不知道怎么用）
+}
+
+MU_nomadic_tribe_agenda_5 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20									#初始权重不能小于1
+		modifier = {
+			factor = 2
+			AND = {
+				adm_power = 150
+				dip_power = 150
+				mil_power = 150
+			}
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_5_1_modifier
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_5_2_modifier
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+ #	provinces_to_highlight = { triggers }		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+ 	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			AND = {
+				adm_power = 150
+				dip_power = 150
+				mil_power = 150
+			}
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		add_adm_power = -150
+		add_dip_power = -150
+		add_mil_power = -150
+		custom_tooltip = MU_all_estate_expect_tribe_lose_20_lolity_tt
+		hidden_effect = {
+			add_estate_loyalty = {
+				estate = all
+				loyalty = -20
+			}
+			add_estate_loyalty = {
+				estate = estate_nomadic_tribes
+				loyalty = 20
+			}
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_5_1_modifier
+			duration = 3650
+		}
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		custom_tooltip = MU_lose_all_monarch_power_tt
+		if = {
+			limit = {
+				adm_power = 0
+			}
+			hidden_effect = { add_adm_power = -9999 }
+			hidden_effect = { add_adm_power = 100 }
+		}
+		if = {
+			limit = {
+				dip_power = 0
+			}
+			hidden_effect = { add_dip_power = -9999 }
+			hidden_effect = { add_dip_power = 999 }
+		}
+		if = {
+			limit = {
+				mil_power = 0
+			}
+			hidden_effect = { add_mil_power = -9999 }
+			hidden_effect = { add_mil_power = 100 }
+		}
+		add_estate_loyalty = {
+			estate = all
+			loyalty = -20
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_5_2_modifier
+			duration = 3650
+		}
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { triggers } 						#议程失败的条件
+ #	on_invalid = { effects } 					#议程结束但不计入失败时执行的效果，一般用于清除flag和修正
+ #	invalid_trigger = { triggers } 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，自动满足该条件
+ #	modifier = { modifier } 					#议程激活时的修正（测试了一下没效果，不知道怎么用）
+}
+
+MU_nomadic_tribe_agenda_6 = {
+	max_days_active = 3650 						#设定议程持续时间，用于覆盖默认的7300天（20年）
+	can_select = { has_country_flag = MU_gek_tribe_control_council_flag } 					#该议程出现的条件，若不满足则不会出现
+	selection_weight = {						#该议程出现的权重
+		factor = 20 									#初始权重不能小于1
+		modifier = {
+			factor = 1.5
+			num_of_subjects = 3
+		}
+		modifier = {
+			factor = 1.5
+			num_of_subjects = 4
+		}
+		modifier = {
+			factor = 2
+			NOT = {
+				ai = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_subjects = 1 }
+		}
+		modifier = {
+			factor = 0
+			has_country_modifier = MU_nomadic_tribe_agenda_6_modifier
+		}
+	}
+ #	pre_effect = { effects }					#出现议程前为议程设置目标（国家或省份）
+ #	provinces_to_highlight = { triggers }		#议程中高亮省份的条件 Root = country, this = province.（建议放pre_effect后面）
+	immediate_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 5
+		}
+		add_country_modifier = {
+			name = MU_nomadic_tribe_agenda_6_modifier
+			duration = 3650
+		}
+	} 				#选择该议程时执行的效果
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_nomadic_tribes
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_nomadic_tribes
+			}
+		}
+		else = {
+			ROOT = {
+				all_subject_country = {
+					has_opinion = {
+						who = ROOT
+						value = 120
+					}
+				}
+			}
+		}
+	} 			#完成议程的条件
+	task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_nomadic_tribes
+		}
+		ROOT = {
+			every_subject_country = {
+				add_liberty_desire = -20
+				add_trust = {
+					who = ROOT
+					value = 25
+					mutual = yes
+				}
+			}
+		}
+		random_list = {
+			1 = {
+				hidden_effect = {
+					random_subject_country = {
+						limit = {
+							NOT = { historical_friend_with = ROOT }
+						}
+						save_event_target_as = MU_become_historical_friend_target
+					}
+				}
+				event_target:MU_become_historical_friend_target = {
+					remove_historical_rival = ROOT
+					add_historical_friend = ROOT
+				}
+				ROOT = {
+					remove_historical_rival = event_target:MU_become_historical_friend_target
+					add_historical_friend = event_target:MU_become_historical_friend_target
+				}
+			}
+			9 = { }
+		}
+		remove_country_modifier = MU_nomadic_tribe_agenda_6_modifier
+	} 		#完成议程时执行的效果
+	failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		custom_tooltip = MU_lose_subject_if_liberty_desire_50_tt
+		hidden_effect = {
+			ROOT = {
+				every_subject_country = {
+					if = {
+						limit = {
+							liberty_desire = 50
+						}
+						grant_independence = yes
+					}
+				}
+			}
+		}
+		remove_country_modifier = MU_nomadic_tribe_agenda_6_modifier
+	} 				#议程失败时执行的效果(达成fail_if或议程结束)
+ #	fail_if = { triggers } 						#议程失败的条件
+	on_invalid = {
+		remove_country_modifier = MU_nomadic_tribe_agenda_6_modifier
+	} 					#议程结束但不计入失败时执行的效果，一般用于清除flag和修正
+	invalid_trigger = {
+		NOT = { num_of_subjects = 1 }
+	} 				#议程结束但不计入失败的条件 如果给出议程的阶层被移除，自动满足该条件
+ #	modifier = { modifier } 					#议程激活时的修正（测试了一下没效果，不知道怎么用）
+}

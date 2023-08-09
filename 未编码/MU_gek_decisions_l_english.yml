@@ -1,0 +1,9 @@
+l_english:
+ MU_gek_select_future_road_decision_title: "@GEK预览或选择§Y[GEK.GetName]§!的后续§Y任务§!"
+ MU_gek_select_future_road_decision_desc: ""
+ MU_without_select_future_road_event_tt: "当前未在「预览或选择后续任务」的事件中"
+ MU_gek_change_plantations_decision_title: "@[Root.GetTag]改建£MU_trade_goods_cotton£种植园"
+ MU_gek_change_plantations_decision_desc: ""
+ MU_gek_joint_exercises_title: "@[Root.GetTag]总督区联合演习"
+ MU_gek_joint_exercises_desc: ""
+ MU_is_avilable_every_20_years_tt: "该§Y决议§!每20年可以执行一次"

@@ -1,0 +1,833 @@
+namespace = MU_gek_events
+country_event = {	#隐藏事件，用于判断事件链是否开启
+	id = MU_gek_events.1
+	title = MU_gek_events.1.t
+	desc = MU_gek_events.1.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 3650
+	
+		modifier = {
+			factor = 0.8
+			AND = {
+				NOT = { stability = 3 }
+				stability = 2
+			}
+		}
+
+		modifier = {
+			factor = 0.6
+			AND = {
+				NOT = { stability = 2 }
+				stability = 1
+			}
+		}
+
+		modifier = {
+			factor = 0.4
+			AND = {
+				NOT = { stability = 1 }
+				stability = 0
+			}
+		}
+
+		modifier = {
+			factor = 0.2
+			NOT = { stability = 0 }
+		}
+
+		modifier = {
+			factor = 0.001
+			NOT = { has_ruler = "Shah Rukh" }
+		}
+	}
+
+	trigger = {
+		tag = GEK
+		has_reform = mongolian_shackles
+	}
+
+	immediate = {
+		set_country_flag = MU_gurkayan_rebels_has_appear_flag
+	}
+
+	option = {
+		name = MU_gek_events.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		country_event = {
+			id = MU_gek_events.2
+		}
+	}
+}
+
+country_event = {	#出现叛军事件
+	id = MU_gek_events.2
+	title = MU_gek_events.2.t
+	desc = {
+		trigger = {
+			NOT = { has_ruler = "Shah Rukh" }
+		}
+		desc = MU_gek_events.2.d_1
+	}
+	desc = {
+		trigger = {
+			has_ruler = "Shah Rukh"
+		}
+		desc = MU_gek_events.2.d_2
+	}
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = MU_gurkayan_rebels_has_appear_flag
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+					}
+					any_neighbor_province = {
+						province_id = 522
+					}
+				}
+				gurkayan_rebels = 2
+				set_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+				save_event_target_as = gek_events_2_target_1
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+					}
+					any_neighbor_province = {
+						province_id = 522
+					}
+				}
+				gurkayan_rebels = 2
+				set_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+				save_event_target_as = gek_events_2_target_2
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+					}
+				}
+				noble_rebels = 2
+				set_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+				save_event_target_as = gek_events_2_target_3
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+					}
+				}
+				noble_rebels = 2
+				set_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+				save_event_target_as = gek_events_2_target_4
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+					}
+				}
+				noble_rebels = 2
+				set_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+				save_event_target_as = gek_events_2_target_5
+			}
+		}
+	}
+
+	option = {
+		name = MU_gek_events.2.a
+		goto = 522
+		tooltip = {
+			event_target:gek_events_2_target_1 = {
+				gurkayan_rebels = 2
+			}
+			event_target:gek_events_2_target_2 = {
+				gurkayan_rebels = 2
+			}
+			event_target:gek_events_2_target_3 = {
+				noble_rebels = 2
+			}
+			event_target:gek_events_2_target_4 = {
+				noble_rebels = 2
+			}
+			event_target:gek_events_2_target_5 = {
+				noble_rebels = 2
+			}
+		}
+		custom_tooltip = MU_gurkayan_display_rebels_effect_tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		every_owned_province = {
+			clr_province_flag = MU_province_gurkayan_rebels_has_appear_flag
+		}
+		country_event = {
+			id = MU_gek_events.5
+			days = 730
+			random = 730
+		}
+	}
+}
+
+country_event = {	#叛军胜利事件
+	id = MU_gek_events.3
+	title = MU_gek_events.3.t
+	desc = MU_gek_events.3.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		has_country_flag = MU_gurkayan_rebels_has_appear_flag
+		522 = {
+			NOT = {
+				controlled_by = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = MU_gek_events.3.a
+		clr_country_flag = MU_gurkayan_rebels_has_appear_flag
+		522 = {
+			add_devastation = 100
+			change_culture = kanauji
+		}
+		custom_tooltip = empty_line_tt
+		custom_tooltip = MU_gek_events_3_effect_tt
+		hidden_effect = {
+			disband_rebels = gurkayan_rebels
+			disband_rebels = noble_rebels
+			every_owned_province = {
+				clear_rebels = yes
+			}
+			every_country = {
+				limit = {
+					war_with = ROOT
+				}
+				white_peace = ROOT
+			}
+			change_tag = DLH	#成立德里
+			release_all_possible_countries = yes	#释放所有具有他国核心的省份
+			release_all_subjects = yes	#释放所有属国
+			swap_free_idea_group = yes	#刷新理念
+			swap_non_generic_missions = yes	#刷新任务
+			add_government_reform = indian_sultanate_reform	#实行印度苏丹国改革
+			if = {	#迁都德里
+				limit = {
+					NOT = {
+						capital = 522
+					}
+				}
+				522 = { move_capital_effect = yes }
+			}
+			if = {	#章普尔吞并奥德，防止丑陋的版图
+				limit = {
+					exists = ODH
+					exists = JNP
+				}
+				JNP = {
+					inherit = ODH
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {	#隐藏事件，用于再次触发叛军，防止事件循环
+	id = MU_gek_events.5
+	title = MU_gek_events.5.t
+	desc = MU_gek_events.5.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = MU_gurkayan_rebels_has_appear_flag
+	}
+
+	option = {
+		name = MU_gek_events.5.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	after = {
+		country_event = {
+			id = MU_gek_events.2
+		}
+	}
+}
+
+country_event = {
+	id = MU_gek_events.6
+	title = MU_gek_events.6.t
+	desc = MU_gek_events.6.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MU_gek_tribe_control_council_flag
+		}
+	}
+	option = {
+		name = MU_gek_events.6.a
+		custom_tooltip = MU_gek_tribe_control_council_tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = MU_gek_events.7
+	title = MU_gek_events.7.t
+	desc = MU_gek_events.7.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MU_gek_gensokyo_mystery_max_flag
+		}
+	}
+	option = {
+		name = MU_gek_events.7.a
+		custom_tooltip = MU_gek_disable_gensokyo_mechanic_tt
+		add_country_modifier = {
+			name = MU_lotus_land_mod
+			duration = -1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = MU_gek_events.8
+	title = MU_gek_events.8.t
+	desc = MU_preview_and_select_road_event.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = MU_with_select_future_road_event_flag
+		}
+	}
+	option = {
+		name = MU_gek_events.8.a
+		trigger = {
+			NOT = { has_country_flag = MU_gek_preview_mongolia_road_flag }
+			ai = no
+		}
+		set_country_flag = MU_gek_preview_mongolia_road_flag
+		clr_country_flag = MU_gek_preview_persia_road_flag
+		clr_country_flag = MU_gek_preview_india_road_flag
+		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = MU_gek_events.8.b
+		trigger = {
+			NOT = { has_country_flag = MU_gek_preview_persia_road_flag }
+			ai = no
+		}
+		clr_country_flag = MU_gek_preview_mongolia_road_flag
+		set_country_flag = MU_gek_preview_persia_road_flag
+		clr_country_flag = MU_gek_preview_india_road_flag
+		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = MU_gek_events.8.c
+		trigger = {
+			NOT = { has_country_flag = MU_gek_preview_india_road_flag }
+			ai = no
+		}
+		clr_country_flag = MU_gek_preview_mongolia_road_flag
+		clr_country_flag = MU_gek_preview_persia_road_flag
+		set_country_flag = MU_gek_preview_india_road_flag
+		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = MU_gek_events.8.d
+		trigger = {
+			OR = {
+				has_country_flag = MU_gek_preview_mongolia_road_flag
+				ai = yes
+			}
+		}
+		clr_country_flag = MU_gek_preview_mongolia_road_flag
+		clr_country_flag = MU_gek_preview_persia_road_flag
+		clr_country_flag = MU_gek_preview_india_road_flag
+		set_country_flag = MU_gek_select_mongolia_road_flag
+		swap_non_generic_missions = yes
+		clr_country_flag = MU_gek_can_select_future_road_flag
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = MU_gek_events.8.e
+		trigger = {
+			OR = {
+				has_country_flag = MU_gek_preview_persia_road_flag
+				ai = yes
+			}
+		}
+		clr_country_flag = MU_gek_preview_mongolia_road_flag
+		clr_country_flag = MU_gek_preview_persia_road_flag
+		clr_country_flag = MU_gek_preview_india_road_flag
+		set_country_flag = MU_gek_select_persia_road_flag
+		swap_non_generic_missions = yes
+		clr_country_flag = MU_gek_can_select_future_road_flag
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = MU_gek_events.8.f
+		trigger = {
+			OR = {
+				has_country_flag = MU_gek_preview_india_road_flag
+				ai = yes
+			}
+		}
+		clr_country_flag = MU_gek_preview_mongolia_road_flag
+		clr_country_flag = MU_gek_preview_persia_road_flag
+		clr_country_flag = MU_gek_preview_india_road_flag
+		set_country_flag = MU_gek_select_india_road_flag
+		swap_non_generic_missions = yes
+		clr_country_flag = MU_gek_can_select_future_road_flag
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = MU_gek_events.8.g
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = MU_with_select_future_road_event_flag
+		}
+	}
+}
+
+country_event = {
+	id = MU_gek_events.9
+	title = MU_gek_events.9.t
+	desc = flavor_gbr.16.desc.adm
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = cheaper_selected_advisor }
+			}
+			set_country_flag = cheaper_selected_advisor
+		}
+		else = {
+			set_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_country_flag = MU_had_set_cheaper_selected_advisor_flag
+			}
+			clr_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+		else = {
+			clr_country_flag = cheaper_selected_advisor
+		}
+	}
+	
+	#ADM Advisor - artist
+	option = {
+		name = flavor_gbr.16.a
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = artist
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#ADM Advisor - inquisitor
+	option = {
+		name = flavor_gbr.16.b
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = inquisitor
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#ADM Advisor - master_of_mint
+	option = {
+		name = flavor_gbr.16.c
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = master_of_mint
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#ADM Advisor - natural_scientist
+	option = {
+		name = flavor_gbr.16.d
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = natural_scientist
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#ADM Advisor - theologian
+	option = {
+		name = flavor_gbr.16.e
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = theologian
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#ADM Advisor - treasurer
+	option = {
+		name = flavor_gbr.16.f
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = treasurer
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#ADM Advisor - philosopher
+	option = {
+		name = flavor_gbr.16.g
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = philosopher
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+country_event = {
+	id = MU_gek_events.10
+	title = MU_gek_events.10.t
+	desc = flavor_gbr.16.desc.dip
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = cheaper_selected_advisor }
+			}
+			set_country_flag = cheaper_selected_advisor
+		}
+		else = {
+			set_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_country_flag = MU_had_set_cheaper_selected_advisor_flag
+			}
+			clr_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+		else = {
+			clr_country_flag = cheaper_selected_advisor
+		}
+	}
+	
+	#DIP Advisor - diplomat
+	option = {
+		name = flavor_gbr.16.h
+		
+		generate_advisor = {
+			type = diplomat
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#DIP Advisor - colonial_governor
+	option = {
+		name = flavor_gbr.16.i
+		
+		generate_advisor = {
+			type = colonial_governor
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#DIP Advisor - naval_reformer
+	option = {
+		name = flavor_gbr.16.j
+		trigger = {
+			
+			num_of_ports = 1
+		}
+		generate_advisor = {
+			type = naval_reformer
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#DIP Advisor - navigator
+	option = {
+		name = flavor_gbr.16.k
+		trigger = {
+			
+			num_of_ports = 1
+		}
+		generate_advisor = {
+			type = navigator
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#DIP Advisor - spymaster
+	option = {
+		name = flavor_gbr.16.l
+		
+		generate_advisor = {
+			type = spymaster
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#DIP Advisor - statesman
+	option = {
+		name = flavor_gbr.16.m
+		
+		generate_advisor = {
+			type = statesman
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#DIP Advisor - trader
+	option = {
+		name = flavor_gbr.16.n
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = trader
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+country_event = {
+	id = MU_gek_events.11
+	title = MU_gek_events.11.t
+	desc = flavor_gbr.16.desc.mil
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = cheaper_selected_advisor }
+			}
+			set_country_flag = cheaper_selected_advisor
+		}
+		else = {
+			set_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_country_flag = MU_had_set_cheaper_selected_advisor_flag
+			}
+			clr_country_flag = MU_had_set_cheaper_selected_advisor_flag
+		}
+		else = {
+			clr_country_flag = cheaper_selected_advisor
+		}
+	}
+	
+	#MIL Advisor - army_organiser
+	option = {
+		name = flavor_gbr.16.o
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = army_organiser
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#MIL Advisor - army_reformer
+	option = {
+		name = flavor_gbr.16.p
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = army_reformer
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#MIL Advisor - commandant
+	option = {
+		name = flavor_gbr.16.q
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = commandant
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#MIL Advisor - grand_captain
+	option = {
+		name = flavor_gbr.16.r
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = grand_captain
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#MIL Advisor - recruitmaster
+	option = {
+		name = flavor_gbr.16.s
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = recruitmaster
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+	#MIL Advisor - fortification_expert
+	option = {
+		name = flavor_gbr.16.u
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = fortification_expert
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	#MIL Advisor - quartermaster
+	option = {
+		name = flavor_gbr.16.v
+		trigger = {
+			
+		}
+		generate_advisor = {
+			type = quartermaster
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}

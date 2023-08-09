@@ -1,0 +1,10 @@
+l_english:
+ MU_vij_march_spice_tt: "所有满足要求的§Y省份§!和§M宗主国§!所有满足要求的§Y省份§!："
+ MU_vij_march_has_highest_node_tt: "§Y[Root.GetName]§!或§M宗主国§!拥有世界上§Y贸易价值§!最高的§Y贸易节点§!"
+ MU_add_2_production_tt: "§Y省份§!获得§G2§!£icon_production_in_text£"
+ MU_vij_march_can_use_hampi_tt: "允许§Y[Root.GetName]§!和§M宗主国§!使用伟大工程「§Y亨比§!」"
+ MU_vij_march_has_coromandel_tt: "§Y[Root.GetName]§!拥有印度次大陆所有属于§Y科罗曼德§!贸易节点的§Y省份§!"
+ MU_vij_march_unlock_joint_exercises_decision_tt: "为§M宗主国§!启用「§Y联合演习§!」决议"
+ MU_vij_march_overlord_unlock_maratha_privilege_tt: "为§M宗主国§!解锁§Y埃米尔§!阶层特权「§Y征召马拉塔战士§!」"
+ MU_neighbor_with_other_country_tt: "与其他§Y国家§!或§Y朝贡国§!相邻"
+ MU_vij_march_deccan_effect_tt: "§Y德干总督区§!将使用特殊的§M德干总督区理念§!，并与§M宗主国§!保持相同的颜色"

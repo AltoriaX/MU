@@ -1,0 +1,24 @@
+vassal = {
+	first = OGE       # 如果关系是宗主-附庸关系，那么这是宗主国tag
+	second = CHG      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	start_date = 1444.11.10 # 关系的起始时刻
+	end_date = 1821.1.1   # 关系的终止时刻
+}
+vassal = {
+	first = OGE       # 如果关系是宗主-附庸关系，那么这是宗主国tag
+	second = KRR      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	start_date = 1444.11.10 # 关系的起始时刻
+	end_date = 1821.1.1   # 关系的终止时刻
+}
+vassal = {
+	first = OGE       # 如果关系是宗主-附庸关系，那么这是宗主国tag
+	second = KUC      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	start_date = 1444.11.10 # 关系的起始时刻
+	end_date = 1821.1.1   # 关系的终止时刻
+}
+vassal = {
+	first = OGE       # 如果关系是宗主-附庸关系，那么这是宗主国tag
+	second = KSD      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	start_date = 1444.11.10 # 关系的起始时刻
+	end_date = 1821.1.1   # 关系的终止时刻
+}

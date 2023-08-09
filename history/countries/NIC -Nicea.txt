@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = byzantine_autocracy_reform
+government_rank = 3
+primary_culture = greek
+religion = orthodox
+technology_group = ottoman
+capital = 317
+1444.1.1 = {
+	monarch = {
+		name = "Konstantinos XI" 
+		dynasty = Osmanoglu
+		birth_date = 1422.3.30
+		culture = turkish_christian
+		adm = 6
+		dip = 5
+		mil = 6
+		leader = {	name = "Konstantinos XI"	type = general	fire = 6	shock = 4	manuever = 4	siege = 4 }
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality
+	#add_ruler_personality = lawgiver_personality
+	add_piety = -0.2
+}

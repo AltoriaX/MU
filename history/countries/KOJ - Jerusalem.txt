@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = holy_state_reform
+primary_culture = Jerusalem
+add_accepted_culture = al_suryah_arabic
+religion = catholic
+technology_group = western
+capital = 379
+1440.1.2 = {
+  monarch = {
+    name = "Henry IV"  # Henry IV
+    dynasty = "d'Anjou"  # d'Anjou
+    birth_date = 1430.5.1
+    adm = 2
+    dip = 4
+    mil = 3
+  }
+}

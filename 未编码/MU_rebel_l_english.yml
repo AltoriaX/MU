@@ -1,0 +1,8 @@
+l_english:
+ MU_gurkayan_rebels_siege_won_effect_tt: "失去§R10§!正统性"
+ MU_gurkayan_rebels_demands_tt:0 "迫使$COUNTRY$改信印度教" 
+ MU_gurkayan_rebels_demands_tt_desc:0 "印度教狂信徒渴望发扬印度教，让印度重回印度教的统治，一旦他们成功，国家将改信印度教"
+ gurkayan_rebels_title: "印度教狂信徒"
+ gurkayan_rebels_name:0 "$COUNTRY$印度教狂信徒"
+ gurkayan_rebels_desc:0 "狂信徒想要迫使当前政权改信，他们的组织装备较差但倾向于向首都进攻"
+ gurkayan_rebels_army:0 "教徒军"

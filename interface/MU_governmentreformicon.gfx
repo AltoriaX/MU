@@ -1,0 +1,30 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_gensokyo"
+		texturefile = "gfx/interface/MU_gov_icons/gensokyo.dds"
+	}
+	spriteType = {
+		name = "government_reform_jinguan"
+		texturefile = "gfx/interface/MU_gov_icons/jinguan.dds"
+	}
+	spriteType = {
+		name = "government_reform_cavalry_raid"
+		texturefile = "gfx/interface/MU_gov_icons/cavalry_raid.dds"
+	}
+	spriteType = {
+		name = "government_reform_mongolia_1"
+		texturefile = "gfx/interface/MU_gov_icons/mongolia_1.dds"
+	}
+	spriteType = {
+		name = "government_reform_mongolia_2"
+		texturefile = "gfx/interface/MU_gov_icons/mongolia_2.dds"
+	}
+	spriteType = {
+		name = "government_reform_mongolia_3"
+		texturefile = "gfx/interface/MU_gov_icons/mongolia_3.dds"
+	}
+	spriteType = {
+		name = "government_reform_mongolia_4"
+		texturefile = "gfx/interface/MU_gov_icons/mongolia_4.dds"
+	}
+}

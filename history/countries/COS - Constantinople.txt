@@ -1,0 +1,10 @@
+government = republic
+add_government_reform = merchants_reform
+mercantilism = 25
+primary_culture = latin_greek
+add_accepted_culture = greek
+religion = catholic
+add_accepted_culture = greek
+technology_group = western
+capital = 112 # Venezia
+fixed_capital = 151

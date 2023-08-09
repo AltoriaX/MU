@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = Khitan
+add_accepted_culture = baluchi
+religion = confucianism
+add_harmonized_religion = shiite
+technology_group = nomad_group
+capital = 431
+
+
+1435.1.1 = {
+	monarch = {
+		name = "chucai"
+		dynasty = "Yelu"
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}
+

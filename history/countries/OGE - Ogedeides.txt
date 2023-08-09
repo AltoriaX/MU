@@ -1,0 +1,25 @@
+fixed_capital = 2120 # Ili
+government_rank = 3
+government = tribal
+add_government_reform = steppe_horde
+capital = 4678
+mercantilism = 10
+technology_group = nomad_group
+religion = tengri_pagan_reformed
+secondary_religion = vajrayana
+primary_culture = mongol
+add_army_professionalism = 0
+set_estate_privilege = estate_nobles_strong_duchies
+
+1420.8.20 = {
+	monarch = {
+		name = "Timur"
+        birth_date = 1402.8.20
+		dynasty = "Borjigin"
+		adm = 4	
+		dip = 4	
+		mil = 5
+		leader = { name = "Timur"	type = general	fire = 6	shock = 6	manuever = 6	siege = 2 }
+	}
+	add_piety = 0.5
+}

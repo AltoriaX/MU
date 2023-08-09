@@ -1,0 +1,37 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_MU_tribe_rule_frame"
+		texturefile = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_MU_tribe_rule_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_bar.dds"
+		textureFile2 = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_bar_empty.dds"
+		size = { x = 260 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	spriteType = {
+		name = "GFX_MU_tribe_rule_interface_church"
+		texturefile = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_interface_church.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_MU_tribe_rule_interface_nobles"
+		texturefile = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_interface_nobles.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_MU_tribe_rule_interface_jains"
+		texturefile = "gfx/interface/MU_gov_mechanics/MU_tribe_rule/MU_tribe_rule_interface_jains.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}
