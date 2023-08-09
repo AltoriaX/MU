@@ -1,0 +1,74 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_grain"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_grain.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_wine"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_wine.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_wool"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_wool.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_cloth"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_cloth.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_fish"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_fish.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_fur"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_fur.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_salt"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_salt.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_naval_supplies"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_naval_supplies.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_copper"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_copper.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_gold"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_gold.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_iron"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_iron.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_slaves"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_slaves.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_ivory"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_ivory.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_tea"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_tea.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_chinaware"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_chinaware.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_spices"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_spices.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_coffee"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_coffee.dds"
+	}
+	spriteType = {
+		name = "GFX_text_MU_trade_goods_cotton"
+		texturefile = "gfx/interface/MU_icon_in_text/MU_icon_in_text_cotton.dds"
+	}
+}
