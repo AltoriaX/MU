@@ -6,3 +6,8 @@ l_english:
  gurkayan_rebels_name:0 "$COUNTRY$印度教狂信徒"
  gurkayan_rebels_desc:0 "狂信徒想要迫使当前政权改信，他们的组织装备较差但倾向于向首都进攻"
  gurkayan_rebels_army:0 "教徒军"
+ daamaad_rebels_title: "达阿马德叛军"
+ daamaad_rebels_name:0 "$COUNTRY$达阿马德"
+ daamaad_rebels_desc:0 "达阿马德叛军想要在我们的土地上建立自己的统治，因为他们在我们身上嗅到了软弱的气息。"
+ daamaad_rebels_army:0 "达阿马德军队"
+ MU_EST_VAL_SUCCESFUL_DAAMAAD_REVOLT: "达阿马德叛乱成功"

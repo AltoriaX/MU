@@ -1,0 +1,251 @@
+﻿l_english:
+ MU_MOS_ross_warrior_title:0 "罗斯勇士"
+ MU_MOS_ross_warrior_desc:0 ""
+
+ MU_MOS_shoot_army_title:0 "射击军团"
+ MU_MOS_shoot_army_desc:0 ""
+
+ MU_MOS_grey_army_lock_title:0 "锁定任务"
+ MU_MOS_grey_army_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_grey_army_title:0 "灰衣新军"
+ MU_MOS_grey_army_desc:0 ""
+
+ MU_MOS_ural_title:0 "翻越乌拉尔"
+ MU_MOS_ural_desc:0 ""
+
+ MU_MOS_west_siberia_title:0 "宁静之野"
+ MU_MOS_west_siberia_desc:0 ""
+
+ MU_MOS_east_siberia_title:0 "穿越冻原"
+ MU_MOS_east_siberia_desc:0 ""
+
+ MU_MOS_dominate_east_lock_title:0 "锁定任务"
+ MU_MOS_dominate_east_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_bering_lock_title:0 "锁定任务"
+ MU_MOS_bering_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_colony_canada_lock_title:0 "锁定任务"
+ MU_MOS_colony_canada_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_dominate_east_title:0 "统治东方"
+ MU_MOS_dominate_east_desc:0 ""
+
+ MU_MOS_bering_title:0 "横渡冰峡"
+ MU_MOS_bering_desc:0 ""
+
+ MU_MOS_colony_canada_title:0 "[Root.GetName]的北极圈"
+ MU_MOS_colony_canada_desc:0 ""
+
+ MU_MOS_boyar_title:0 "波雅尔服役"
+ MU_MOS_boyar_desc:0 ""
+
+ MU_MOS_tatar_shackle_title:0 "挣脱枷锁"
+ MU_MOS_tatar_shackle_desc:0 ""
+
+ MU_MOS_grassland_king_title:0 "宣称草原汗王"
+ MU_MOS_grassland_king_desc:0 ""
+
+ MU_MOS_caucasus_title:0 "兀立山巅"
+ MU_MOS_caucasus_desc:0 ""
+
+ MU_MOS_caspian_sea_title:0 "眺望里海"
+ MU_MOS_caspian_sea_desc:0 ""
+
+ MU_MOS_india_ocean_lock_title:0 "锁定任务"
+ MU_MOS_india_ocean_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_afghan_lock_title:0 "锁定任务"
+ MU_MOS_afghan_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_cpnquer_india_lock_title:0 "锁定任务"
+ MU_MOS_cpnquer_india_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_middle_asia_lock_title:0 "锁定任务"
+ MU_MOS_middle_asia_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_amur_lock_title:0 "锁定任务"
+ MU_MOS_amur_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_india_ocean_title:0 "抵达印度洋"
+ MU_MOS_india_ocean_desc:0 ""
+
+ MU_MOS_afghan_title:0 "征服阿富汗群青"
+ MU_MOS_afghan_desc:0 ""
+
+ MU_MOS_cpnquer_india_title:0 "次大陆的财富"
+ MU_MOS_cpnquer_india_desc:0 ""
+
+ MU_MOS_middle_asia_title:0 "夺取内亚心脏"
+ MU_MOS_middle_asia_desc:0 ""
+
+ MU_MOS_amur_title:0 "饮马黑水"
+ MU_MOS_amur_desc:0 ""
+
+ MU_MOS_lamb_angry_title:0 "羔羊之怒"
+ MU_MOS_lamb_angry_desc:0 ""
+
+ MU_MOS_don_rive_title:0 "静静的顿河"
+ MU_MOS_don_rive_desc:0 ""
+
+ MU_MOS_black_sea_title:0 "黑海战略"
+ MU_MOS_black_sea_desc:0 ""
+
+ MU_MOS_balkan_title:0 "巴尔干新霸主"
+ MU_MOS_balkan_desc:0 ""
+
+ MU_MOS_nicaea_lock_title:0 "锁定任务"
+ MU_MOS_nicaea_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_constantinople_lock_title:0 "锁定任务"
+ MU_MOS_constantinople_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_nicaea_title:0 "旧友今敌"
+ MU_MOS_nicaea_desc:0 ""
+
+ MU_MOS_constantinople_title:0 "世界渴望之城"
+ MU_MOS_constantinople_desc:0 ""
+
+ MU_MOS_annex_vassal_title:0 "整合诸邦"
+ MU_MOS_annex_vassal_desc:0 ""
+
+ MU_MOS_novgorod_title:0 "古罗斯之城邦"
+ MU_MOS_novgorod_desc:0 ""
+
+ MU_MOS_ruthenian_title:0 "鲁塞尼亚之心"
+ MU_MOS_ruthenian_desc:0 ""
+
+ MU_MOS_poland_title:0 "跃马维斯瓦河"
+ MU_MOS_poland_desc:0 ""
+
+ MU_MOS_carpathia_title:0 "征服卡帕提亚"
+ MU_MOS_carpathia_desc:0 ""
+
+ MU_MOS_north_sea_title:0 "进军北海"
+ MU_MOS_north_sea_desc:0 ""
+
+ MU_MOS_remove_orthodox_title:0 "摒弃旧日信仰"
+ MU_MOS_remove_orthodox_desc:0 ""
+
+ MU_MOS_moscow_mosque_title:0 "莫斯科大清真寺"
+ MU_MOS_moscow_mosque_desc:0 ""
+
+ MU_MOS_islam_road_lock_title:0 "锁定任务"
+ MU_MOS_islam_road_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_mecca_lock_title:0 "锁定任务"
+ MU_MOS_mecca_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_islam_road_title:0 "朝圣之路"
+ MU_MOS_islam_road_desc:0 ""
+
+ MU_MOS_mecca_title:0 "圣地巡礼"
+ MU_MOS_mecca_desc:0 ""
+
+ MU_MOS_oprichnina_title:0 "特辖区制"
+ MU_MOS_oprichnina_desc:0 ""
+
+ MU_MOS_absolutism_lock_title:0 "锁定任务"
+ MU_MOS_absolutism_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_absolutism_title:0 "莫斯科绝对主义"
+ MU_MOS_absolutism_desc:0 ""
+
+ MU_MOS_livonia_title:0 "西方之窗"
+ MU_MOS_livonia_desc:0 ""
+
+ MU_MOS_finland_title:0 "万湖之地"
+ MU_MOS_finland_desc:0 ""
+
+ MU_MOS_sweden_title:0 "安息之国"
+ MU_MOS_sweden_desc:0 ""
+
+ MU_MOS_baltic_hegemony_title:0 "波罗的海霸权"
+ MU_MOS_baltic_hegemony_desc:0 ""
+
+ MU_MOS_denmark_title:0 "斯卡格拉克海峡"
+ MU_MOS_denmark_desc:0 ""
+
+ MU_MOS_ulema_title:0 "引进乌理玛"
+ MU_MOS_ulema_desc:0 ""
+
+ MU_MOS_build_temple_lock_title:0 "锁定任务"
+ MU_MOS_build_temple_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_islam_north_center_lock_title:0 "锁定任务"
+ MU_MOS_islam_north_center_lock_desc:0 "这是一个§Y锁定任务§!，成立@RUS§Y[RUS.GetName]§!后解锁"
+
+ MU_MOS_build_temple_title:0 "清真寺之国"
+ MU_MOS_build_temple_desc:0 ""
+
+ MU_MOS_islam_north_center_title:0 "伊斯兰北方壁垒"
+ MU_MOS_islam_north_center_desc:0 ""
+
+ MU_MOS_branch_56_title:0 "西伯利亚前哨站"
+ MU_MOS_branch_56_desc:0 ""
+
+ MU_MOS_branch_57_title:0 "皮革繁荣"
+ MU_MOS_branch_57_desc:0 ""
+
+ MU_MOS_branch_63_title:0 "开发针叶林"
+ MU_MOS_branch_63_desc:0 ""
+
+ MU_MOS_branch_55_title:0 "环里海商贸圈"
+ MU_MOS_branch_55_desc:0 ""
+
+ MU_MOS_branch_48_title:0 "修缮诸城"
+ MU_MOS_branch_48_desc:0 ""
+
+ MU_MOS_branch_50_title:0 "两河枢纽"
+ MU_MOS_branch_50_desc:0 ""
+
+ MU_MOS_branch_59_title:0 "第聂伯河畔"
+ MU_MOS_branch_59_desc:0 ""
+
+ MU_MOS_branch_67_title:0 "联通大陆"
+ MU_MOS_branch_67_desc:0 ""
+
+ MU_MOS_branch_38_title:0 "东方新帝国"
+ MU_MOS_branch_38_desc:0 ""
+
+ MU_MOS_branch_51_title:0 "沃野千里"
+ MU_MOS_branch_51_desc:0 ""
+
+ MU_MOS_branch_53_title:0 "御营伏特加"
+ MU_MOS_branch_53_desc:0 ""
+
+ MU_MOS_branch_66_title:0 "中亚的堡垒"
+ MU_MOS_branch_66_desc:0 ""
+
+ MU_MOS_branch_64_title:0 "巩固印度洋"
+ MU_MOS_branch_64_desc:0 ""
+
+ MU_MOS_branch_68_title:0 "欧亚之主"
+ MU_MOS_branch_68_desc:0 ""
+
+ MU_MOS_branch_49_title:0 "英格里亚之窗"
+ MU_MOS_branch_49_desc:0 ""
+
+ MU_MOS_branch_52_title:0 "波罗的海明珠"
+ MU_MOS_branch_52_desc:0 ""
+
+ MU_MOS_branch_58_title:0 "帝国海军"
+ MU_MOS_branch_58_desc:0 ""
+
+ MU_MOS_branch_65_title:0 "致大海"
+ MU_MOS_branch_65_desc:0 ""
+
+ MU_MOS_branch_54_title:0 "白海航道"
+ MU_MOS_branch_54_desc:0 ""
+
+ MU_MOS_branch_61_title:0 "北海之眼"
+ MU_MOS_branch_61_desc:0 ""
+
+ MU_MOS_branch_60_title:0 "太平洋良港"
+ MU_MOS_branch_60_desc:0 ""
+
+ MU_MOS_branch_62_title:0 "安克雷奇峡湾"
+ MU_MOS_branch_62_desc:0 ""
+
+

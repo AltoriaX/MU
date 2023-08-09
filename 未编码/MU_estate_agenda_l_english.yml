@@ -1,10 +1,10 @@
 l_english:
  MU_every_owned_province_tt: "治下所有省份："
  MU_lose_all_manpower_tt: "失去所有§Y人力§!"
- MU_AGENDA_INFLUENCE_10_TT: "加强$estate_nomadic_tribes$统治：§Y+10%§!"
+ MU_AGENDA_INFLUENCE_10_TT: "加强$estate_daamaad$统治：§Y+10%§!"
  muAgendaRazeNumber: "焚掠的省份数量"
  MU_agenda_kill_ruler_and_add_negative_personality_tt: "杀死当前统治者\n新上台的统治者将随机获得一个§R负面特质§!"
- MU_all_estate_expect_tribe_lose_20_lolity_tt: "除§Y部族§!外的所有§Y阶层§!失去§R20§!忠诚度"
+ MU_all_estate_expect_tribe_lose_20_lolity_tt: "除§Y[Root.Get达阿马德Name]§!外的所有§Y阶层§!失去§R20§!忠诚度"
  MU_lose_all_monarch_power_tt: "失去所有君主点数"
  MU_lose_subject_if_liberty_desire_50_tt: "所有独立倾向高于§Y50%§!的附属国将立即§R独立§!"
  MU_nomadic_tribe_agenda_1: "特殊议程：部族要求进贡"
