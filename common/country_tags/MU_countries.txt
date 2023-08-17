@@ -1,5 +1,6 @@
 #India
 GEK = "countries/Gurkayan.txt"
+GHU = "countries/Ghor.txt"
 #Mongol
 OGE = "countries/Ogedeides.txt"
 #Levant
