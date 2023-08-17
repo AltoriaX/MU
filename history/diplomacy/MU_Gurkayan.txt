@@ -1,12 +1,12 @@
 vassal = {
 	first = GEK       # 如果关系是宗主-附庸关系，那么这是宗主国tag
-	second = SND      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	second = GHU      # 如果关系是宗主-附庸关系，那么这是附庸国tag
 	start_date = 1444.11.10 # 关系的起始时刻
 	end_date = 1821.1.1   # 关系的终止时刻
 }
 vassal = {
 	first = GEK       # 如果关系是宗主-附庸关系，那么这是宗主国tag
-	second = MUL      # 如果关系是宗主-附庸关系，那么这是附庸国tag
+	second = PUN      # 如果关系是宗主-附庸关系，那么这是附庸国tag
 	start_date = 1444.11.10 # 关系的起始时刻
 	end_date = 1821.1.1   # 关系的终止时刻
 }
