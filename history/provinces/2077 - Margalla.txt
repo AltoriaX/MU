@@ -1,7 +1,7 @@
 #2077 - Margalla
 
-owner = MUL
-controller = MUL
+owner = PUN
+controller = PUN
 culture = panjabi
 religion = sunni
 capital = "Rawalpindi"

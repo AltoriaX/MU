@@ -1,19 +1,18 @@
-#514 - Marwar
+#2088 - Umarkot
 
 owner = GHU
 controller = GHU
-culture = rajput
+culture = sindhi
 religion = sunni
-add_rajputs_or_marathas_or_nobles_effect = yes
-capital = "Mandore"
-trade_goods = cotton
+capital = "Umarkot"
+trade_goods = wool
 hre = no
-base_tax = 2
-base_production = 2
-base_manpower = 2
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
 add_core = GHU
-add_core = MER 
+add_rajputs_or_marathas_or_nobles_effect = yes
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
