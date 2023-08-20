@@ -22,6 +22,7 @@ QQT = "countries/Khitai.txt"
 QUR = "countries/Chinstein.txt"
 KRT = "countries/Kartids.txt"
 BAA = "countries/Bavandids.txt"
+ELA = "countries/Elam.txt"
 #tatars
 GOL = "countries/GoldenHorde.txt"
 #MiddleAisa
