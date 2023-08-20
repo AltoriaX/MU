@@ -19,6 +19,9 @@ CLC = "countries/Cilicia.txt"
 TMT = "countries/TamerlaneTash.txt"
 #Prsia 
 QQT = "countries/Khitai.txt"
+QUR = "countries/Chinstein.txt"
+KRT = "countries/Kartids.txt"
+BAA = "countries/Bavandids.txt"
 #tatars
 GOL = "countries/GoldenHorde.txt"
 #MiddleAisa

@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = iqta
+technology_group = muslim
+religion = sunni
+primary_culture = afghani
+capital = 451	# Kabul
+religious_school = hanafi_school
+
+
+1415.11.1 = {
+	monarch = {
+		name = "Mir 'Abd-al'Aziz"
+		dynasty = "Kartids"
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}

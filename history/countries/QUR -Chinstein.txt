@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = chihan
+add_accepted_culture = persian
+religion = confucianism
+add_harmonized_religion = shiite
+technology_group = muslim
+capital = 2218 # Shiraz
+
+
+1435.1.1 = {
+	monarch = {
+		name = "jing wei"
+		dynasty = "Wang"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}
+
