@@ -25,6 +25,7 @@ BAA = "countries/Bavandids.txt"
 ELA = "countries/Elam.txt"
 #tatars
 GOL = "countries/GoldenHorde.txt"
+SEL = "countries/Seljuks.txt"
 #MiddleAisa
 KUC = "countries/Kuci.txt"
 KRR = "countries/Kroraina.txt"

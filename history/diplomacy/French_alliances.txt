@@ -1,0 +1,38 @@
+# France-Orleans
+dependency = {
+	subject_type = appanage
+	first = FRA
+	second = ORL
+	start_date = 1444.1.1
+	end_date = 1532.8.3
+}
+# France-Flanders
+dependency = {
+	subject_type = appanage
+	first = FRA
+	second = FLA 
+	start_date = 1444.1.1
+	end_date = 1532.8.3
+}
+# France-Bourbon
+dependency = {
+	subject_type = appanage
+	first = FRA
+	second = BOU
+	start_date = 1444.1.1
+	end_date = 1532.8.3
+}
+# France-England
+union = {
+	first = FRA
+	second = ENG
+	start_date = 1444.1.1
+	end_date = 1532.8.3
+}
+#
+vassal = {
+	first = AMG       
+	second = FOI     
+	start_date = 1444.11.10 
+	end_date = 1821.1.1   
+}
